@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/polyak-snkrs/static/css/main.84bb5b9f.css",
-    "main.js": "/polyak-snkrs/static/js/main.02aa4986.js",
+    "main.css": "/polyak-snkrs/static/css/main.c5e8809b.css",
+    "main.js": "/polyak-snkrs/static/js/main.8ad661c6.js",
     "static/media/screen_bg-img.jpg": "/polyak-snkrs/static/media/screen_bg-img.9ddc5c6c4074dc75a3ad.jpg",
     "static/media/logo.svg": "/polyak-snkrs/static/media/logo.4b05fb91b24aab57aac0d8671ff30504.svg",
     "index.html": "/polyak-snkrs/index.html",
-    "main.84bb5b9f.css.map": "/polyak-snkrs/static/css/main.84bb5b9f.css.map",
-    "main.02aa4986.js.map": "/polyak-snkrs/static/js/main.02aa4986.js.map"
+    "main.c5e8809b.css.map": "/polyak-snkrs/static/css/main.c5e8809b.css.map",
+    "main.8ad661c6.js.map": "/polyak-snkrs/static/js/main.8ad661c6.js.map"
   },
   "entrypoints": [
-    "static/css/main.84bb5b9f.css",
-    "static/js/main.02aa4986.js"
+    "static/css/main.c5e8809b.css",
+    "static/js/main.8ad661c6.js"
   ]
 }

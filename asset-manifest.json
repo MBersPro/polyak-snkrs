@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/polyak-snkrs/static/css/main.d2890cd4.css",
+    "main.js": "/polyak-snkrs/static/js/main.478c0a8e.js",
+    "static/media/screen_bg-img.jpg": "/polyak-snkrs/static/media/screen_bg-img.9ddc5c6c4074dc75a3ad.jpg",
+    "static/media/logo.svg": "/polyak-snkrs/static/media/logo.4b05fb91b24aab57aac0d8671ff30504.svg",
+    "index.html": "/polyak-snkrs/index.html",
+    "main.d2890cd4.css.map": "/polyak-snkrs/static/css/main.d2890cd4.css.map",
+    "main.478c0a8e.js.map": "/polyak-snkrs/static/js/main.478c0a8e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d2890cd4.css",
+    "static/js/main.478c0a8e.js"
+  ]
+}

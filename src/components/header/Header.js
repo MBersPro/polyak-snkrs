@@ -1,11 +1,15 @@
-import React from "react";
-import styles from "./Header.module.css";
+import React, { useState } from "react";
+import "./Header.css";
 import { ReactComponent as Logo } from "./svg/logo.svg";
+import Hamburger from "hamburger-react";
 
-const Header = () => {
+const Header = ({mobileMenu, setMobileMenu}) => {
   return (
-    <div className={styles.container}>
-      <Logo className={styles.logo} />
+    <div className={mobileMenu ? "headerActive" : "headerPassive"}>
+      <div className="container">
+        <a src="#"><Logo className="logo" /></a>
+        <Hamburger toggled={mobileMenu} toggle={setMobileMenu} color="#FC6701" rounded />
+      </div>
     </div>
   );
 };

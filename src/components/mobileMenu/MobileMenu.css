@@ -1,0 +1,17 @@
+.mobileMenuClose {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 100vw;
+  height: 88vh;
+  background-color: white;
+  overflow: auto;
+  z-index: 10;
+  transition: 0.4s;
+  transform: translateX(101%);
+}
+
+.mobileMenuOpen {
+  transform: translateX(0%);
+  transition: 0.4s;
+}

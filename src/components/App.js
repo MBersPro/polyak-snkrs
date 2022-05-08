@@ -17,12 +17,13 @@ const App = () => {
   const [page, setPage] = useState({ ...initialPage });
   const [mobileMenu, setMobileMenu] = useState(false);
 
+const some = () => {setPage(true)}
   return (
     <>
       {page.main && (
         <>
           <Screen>
-            <Header mobileMenu={mobileMenu} setMobileMenu={setMobileMenu} />
+            <Header some={some} mobileMenu={mobileMenu} setMobileMenu={setMobileMenu} />
           </Screen>
           <Catalog />
           <AboutMe />

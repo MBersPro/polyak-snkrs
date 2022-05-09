@@ -5,9 +5,11 @@ import Hamburger from "hamburger-react";
 
 const Header = ({ mobileMenu, setMobileMenu }) => {
   return (
-    <div className={mobileMenu ? "headerActive" : "headerPassive"}>
-      <div className="container">
-        <Logo className="logo" />
+    <div
+      className={mobileMenu ? "mobile_header_active" : "mobile_header_passive"}
+    >
+      <div className="container header_container">
+        <Logo className="header_logo" />
         <Hamburger
           toggled={mobileMenu}
           toggle={setMobileMenu}

@@ -1,0 +1,31 @@
+.footer_container {
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer_logo {
+  width: 160px;
+  margin-bottom: 22px;
+}
+
+.footer_icons_container {
+  display: flex;
+}
+
+.footer_icon_container {
+  display: flex;
+  align-items: center;
+}
+
+.footer_icon_container:not(:last-child) {
+  margin-right: 10px;
+}
+
+.footer_icons {
+  fill: var(--b-orange);
+  width: 18px;
+  height: 18px;
+}

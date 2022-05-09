@@ -21,3 +21,4 @@ H2:
     font-weight: var(--r-fw);
     font-family: var(--font);
     color: var(--b-orange);
+    

@@ -6,3 +6,27 @@
   box-sizing: border-box;
   padding: var(--c-padding);
 }
+
+.catalog_container {
+    padding-top: 20px;
+}
+
+/* .catalog_head {
+
+} */
+
+.catalog_filter_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.catalog_filter_li {
+    font-family: var(--font);
+    font-weight: var(--l-fw);
+    justify-content: space-between;
+}
+
+/* .catalog_filter_li:not(:last-child) {
+    margin-right: 10px;
+} */

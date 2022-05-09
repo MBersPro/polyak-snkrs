@@ -5,7 +5,8 @@
   max-width: 480px;
   box-sizing: border-box;
   padding: var(--c-padding);
-  height: 12vh;
+  padding-top: 12px;
+  padding-bottom: 12px;
   display: flex;
   justify-content: space-between;
   align-items: center;

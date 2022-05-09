@@ -3,12 +3,12 @@
   bottom: 0;
   right: 0;
   width: 100vw;
-  height: 88vh;
+  height: calc(100vh - 72px);
   background-color: white;
   overflow: auto;
-  z-index: 10;
+  z-index: 5;
   transition: 0.4s;
-  transform: translateX(100%);
+  transform: translateX(101%);
 }
 
 .mobileMenuOpen {

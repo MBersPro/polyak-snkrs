@@ -1,10 +1,4 @@
-.container {
-  margin-left: auto;
-  margin-right: auto;
-  min-width: 320px;
-  max-width: 480px;
-  box-sizing: border-box;
-  padding: var(--c-padding);
+.header_container {
   padding-top: 12px;
   padding-bottom: 12px;
   display: flex;
@@ -12,16 +6,16 @@
   align-items: center;
 }
 
-.headerActive {
+.mobile_header_active {
   background-color: white;
   transition: 0.4s;
 }
 
-.headerPassive {
+.mobile_header_passive {
   transition: 0.4s;
 }
 
-.logo {
-  position: relative;
+.header_logo {
   width: 100px;
 }
+

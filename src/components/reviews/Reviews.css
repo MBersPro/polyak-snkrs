@@ -1,10 +1,8 @@
-.container{
-    padding-top: 30px;
-    padding-bottom: 44px;
-}
 .container_reviews{
     display: flex;
     flex-direction: column;
+    padding-top: 30px;
+    padding-bottom: 44px;
 }
 .h2_reviews{
     margin-bottom: 27px;

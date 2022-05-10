@@ -4,6 +4,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  border-top: 1px solid rgba(252, 103, 1, 0.5);
 }
 
 .footer_logo {

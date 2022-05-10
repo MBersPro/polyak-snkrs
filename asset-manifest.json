@@ -1,18 +1,19 @@
 {
   "files": {
-    "main.css": "/polyak-snkrs/static/css/main.46e8f8e5.css",
-    "main.js": "/polyak-snkrs/static/js/main.1e6f12a5.js",
+    "main.css": "/polyak-snkrs/static/css/main.f10968ba.css",
+    "main.js": "/polyak-snkrs/static/js/main.30a1cd8d.js",
     "static/media/screen_bg-img.jpg": "/polyak-snkrs/static/media/screen_bg-img.9ddc5c6c4074dc75a3ad.jpg",
+    "static/media/iphone.png": "/polyak-snkrs/static/media/iphone.abef437569a5f9566e84.png",
     "static/media/logo.svg": "/polyak-snkrs/static/media/logo.4b05fb91b24aab57aac0d8671ff30504.svg",
     "static/media/whatsapp.svg": "/polyak-snkrs/static/media/whatsapp.2db65d331fb34fd94cf86fde2d8d89dd.svg",
     "static/media/telegram.svg": "/polyak-snkrs/static/media/telegram.b46c2ea02c46f7b461395f37b11e9837.svg",
     "static/media/instagram.svg": "/polyak-snkrs/static/media/instagram.3e1d2662f3b0746c1e2d12ce43fc8286.svg",
     "index.html": "/polyak-snkrs/index.html",
-    "main.46e8f8e5.css.map": "/polyak-snkrs/static/css/main.46e8f8e5.css.map",
-    "main.1e6f12a5.js.map": "/polyak-snkrs/static/js/main.1e6f12a5.js.map"
+    "main.f10968ba.css.map": "/polyak-snkrs/static/css/main.f10968ba.css.map",
+    "main.30a1cd8d.js.map": "/polyak-snkrs/static/js/main.30a1cd8d.js.map"
   },
   "entrypoints": [
-    "static/css/main.46e8f8e5.css",
-    "static/js/main.1e6f12a5.js"
+    "static/css/main.f10968ba.css",
+    "static/js/main.30a1cd8d.js"
   ]
 }

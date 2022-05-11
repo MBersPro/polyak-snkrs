@@ -75,6 +75,11 @@ const Questions = () => {
                     </details>
                 </li>
             </ul>
+            <form className='form_ask_a_question'>
+                <h3 className='h3_ask_a_question'>Задать вопрос</h3>
+                <input type="text" className='input_ask_a_question' placeholder="Написать вопрос..."/>    
+                <button className='btn_ask_a_question'>Отправить</button>
+            </form>
         </div>
         
     );

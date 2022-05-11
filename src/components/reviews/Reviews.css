@@ -1,0 +1,69 @@
+.container_reviews{
+    display: flex;
+    flex-direction: column;
+    padding-top: 30px;
+    padding-bottom: 44px;
+}
+.h2_reviews{
+    margin-bottom: 27px;
+    text-align: left;
+}
+.iphone_img_reviews{
+    width: 156px;
+    height: 300px;
+    margin-bottom: 40px;
+}
+.div_rest_reviews{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.see_more_reviews{
+    font-family: var(--font);
+    font-style: normal;
+    font-weight: var(--l-fw);
+    font-size: 20px;
+    line-height: 160.2%;
+    margin-bottom: 48px;
+    color: #808080;
+}
+.form_reviews{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.give_feedback_reviews{
+    font-family: var(--font);
+    font-style: normal;
+    font-weight: var(--l-fw);
+    font-size: var(--h2-size);
+    text-align: center;
+    margin-bottom: 17px;
+}
+.input_reviews{
+    width: 280px;
+    height: 45px;
+    border: 1px solid var(--b-orange);
+    border-radius: 2px;
+    margin-bottom: 18px;
+    padding: 0px 0px 0px 7px;
+}
+.input_reviews::placeholder{
+    font-family: var(--font);
+    font-style: normal;
+    font-weight: var(--l-fw);
+    font-size: 14px;
+    color: #808080;
+}
+.send_btn_reviews{
+    width: 120px;
+    height: 30px;
+    font-family: var(--font);
+    font-style: normal;
+    font-weight: var(--l-fw);
+    font-size: 16px;
+    background: var(--b-orange);
+    border-radius: 2px;
+    border: none;
+    color: black;
+}

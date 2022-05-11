@@ -17,13 +17,22 @@ const App = () => {
   const [page, setPage] = useState({ ...initialPage });
   const [mobileMenu, setMobileMenu] = useState(false);
 
-const some = () => {setPage(true)}
+  const some = () => {
+    setPage(true);
+  };
+  console.log(mobileMenu);
   return (
     <>
       {page.main && (
         <>
           <Screen>
-            <Header some={some} mobileMenu={mobileMenu} setMobileMenu={setMobileMenu} />
+            <Header
+              some={some}
+              mobileMenu={mobileMenu}
+              setMobileMenu={setMobileMenu}
+            >
+              <MobileMenu mobileMenu={mobileMenu} />
+            </Header>
           </Screen>
           <Catalog />
           <AboutMe />
@@ -33,7 +42,6 @@ const some = () => {setPage(true)}
         </>
       )}
       {page.contacts && <Contacts />}
-      <MobileMenu mobileMenu={mobileMenu} />
     </>
   );
 };

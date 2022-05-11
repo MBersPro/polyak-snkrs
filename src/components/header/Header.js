@@ -3,7 +3,7 @@ import "./Header.css";
 import { ReactComponent as Logo } from "./svg/logo.svg";
 import Hamburger from "hamburger-react";
 
-const Header = ({ mobileMenu, setMobileMenu }) => {
+const Header = ({ mobileMenu, setMobileMenu, children }) => {
   return (
     <div
       className={mobileMenu ? "mobile_header_active" : "mobile_header_passive"}
@@ -17,6 +17,7 @@ const Header = ({ mobileMenu, setMobileMenu }) => {
           rounded
         />
       </div>
+      {children}
     </div>
   );
 };

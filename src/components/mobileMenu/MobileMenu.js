@@ -5,10 +5,13 @@ const MobileMenu = ({ mobileMenu }) => {
   return (
     <div
       className={
-        mobileMenu ? "mobileMenuClose mobileMenuOpen" : "mobileMenuClose"
+        mobileMenu ? "mobileMenuOpen" : "mobileMenuClose"
       }
     >
       Mobile Menu
+      plr[gpe][hgkrwhg
+      wertgl]rt[per]]
+      dkfjgldkgjldkfjgl
     </div>
   );
 };

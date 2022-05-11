@@ -1,18 +1,20 @@
+.mobile_header_active {
+  background-color: white;
+  transition: 0.4s;
+  width: 100vw;
+  position: fixed;
+}
+
+.mobile_header_passive {
+  transition: 0.4s;
+}
+
 .header_container {
   padding-top: 12px;
   padding-bottom: 12px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-.mobile_header_active {
-  background-color: white;
-  transition: 0.4s;
-}
-
-.mobile_header_passive {
-  transition: 0.4s;
 }
 
 .header_logo {

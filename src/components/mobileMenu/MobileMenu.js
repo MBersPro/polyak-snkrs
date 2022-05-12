@@ -8,10 +8,7 @@ const MobileMenu = ({ mobileMenu }) => {
         mobileMenu ? "mobileMenuOpen" : "mobileMenuClose"
       }
     >
-      Mobile Menu
-      plr[gpe][hgkrwhg
-      wertgl]rt[per]]
-      dkfjgldkgjldkfjgl
+      
     </div>
   );
 };

@@ -2,7 +2,7 @@ import React from 'react';
 import "./Questions.css";
 const Questions = () => {
     return (
-        <div className='container container_question'>
+        <div className='container container_question' id="questions">
             <h2 className='h2_question'>ЧАСТО ЗАДАВАЕМЫЕ ВОПРОСЫ</h2>
             <ul className='ul_question'>
                 <li className='li_question'>

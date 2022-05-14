@@ -3,7 +3,7 @@ import "./Catalog.css";
 
 const Catalog = () => {
   return (
-    <div className="container catalog_container">
+    <div className="container catalog_container" id="catalog">
       <div className="catalog_head">
         <ul className="catalog_filter_container">
           <li>

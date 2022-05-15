@@ -1,0 +1,9 @@
+.productList_image_container{
+    width: 160px;
+    height: 160px;
+}
+.productList_image{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}

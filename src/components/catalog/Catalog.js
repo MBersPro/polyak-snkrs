@@ -5,9 +5,11 @@ import ProductsList from "./productsList/ProductsList";
 
 const Catalog = () => {
   return (
+
     <div className="container catalog_container">
       <CatalogHead />
       <ProductsList/>
+
     </div>
   );
 };

@@ -3,7 +3,7 @@ import Iphone from "./img/iphone.png"
 import "./Reviews.css"
 const Reviews = () => {
     return (
-        <div className='container_reviews container'>
+        <div className='container_reviews container' id="review">
             <div className='div_h2_reviews'>
                 <h2 className='h2_reviews'>ОТЗЫВЫ</h2>
             </div>  

@@ -3,8 +3,9 @@ import "./Header.css";
 import { ReactComponent as Logo } from "./svg/logo.svg";
 import Hamburger from "hamburger-react";
 
-const Header = ({ mobileMenu, setMobileMenu, children }) => {
+const Header = ({ mobileMenu, children, changeMobileMenu}) => {
   return (
+
     <div
       className={mobileMenu ? "mobile_header_active" : "mobile_header_passive"}
     >
@@ -12,7 +13,7 @@ const Header = ({ mobileMenu, setMobileMenu, children }) => {
         <Logo className="header_logo" />
         <Hamburger
           toggled={mobileMenu}
-          toggle={setMobileMenu}
+          toggle={changeMobileMenu}
           color="#FC6701"
           rounded
         />

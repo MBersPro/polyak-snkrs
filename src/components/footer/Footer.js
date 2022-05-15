@@ -8,7 +8,7 @@ import { ReactComponent as Instagram } from "./svg/instagram.svg";
 const Footer = () => {
   return (
     <div className="footer_container container">
-      <Logo className="footer_logo" />
+      <Logo className="footer_logo" id="top"/>
       <ul className="footer_icons_container">
         <li className="footer_icon_container">
           <a href="https://wa.me/79851981025">

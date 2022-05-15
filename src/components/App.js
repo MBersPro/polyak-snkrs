@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import AboutMe from "./aboutMe/AboutMe";
 import Catalog from "./catalog/Catalog";
-import Contacts from "./contacts/Contacts";
 import Footer from "./footer/Footer";
 import Header from "./header/Header";
 import MobileMenu from "./mobileMenu/MobileMenu";
@@ -9,29 +8,31 @@ import Questions from "./questions/Questions";
 import Reviews from "./reviews/Reviews";
 import Screen from "./screen/Screen";
 
-const initialPage = {
-  main: true,
-};
 
 const App = () => {
-  const [page, setPage] = useState({ ...initialPage });
+  const [page, setPage] = useState({ main: true });
   const [mobileMenu, setMobileMenu] = useState(false);
 
-  const some = () => {
-    setPage(true);
+  const changeMobileMenu = () => {
+    setMobileMenu((prev) => !prev)
+    setPage({main: true})
+  }
+
+  const closeMobileMenu = () => {
+    setMobileMenu(false)
+  }
+  const changePage = (page) => {
+    setPage({[page]: true});
   };
   console.log(mobileMenu);
   return (
-    <>
-      {page.main && (
         <>
           <Screen>
             <Header
-              some={some}
               mobileMenu={mobileMenu}
-              setMobileMenu={setMobileMenu}
+              changeMobileMenu={changeMobileMenu}
             >
-              <MobileMenu mobileMenu={mobileMenu} />
+              <MobileMenu page={page} mobileMenu={mobileMenu} changePage={changePage} closeMobileMenu={closeMobileMenu} />
             </Header>
           </Screen>
           <Catalog />
@@ -40,9 +41,6 @@ const App = () => {
           <Reviews />
           <Footer />
         </>
-      )}
-      {page.contacts && <Contacts />}
-    </>
   );
 };
 

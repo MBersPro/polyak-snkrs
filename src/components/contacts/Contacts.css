@@ -1,0 +1,37 @@
+.ul_contacts{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
+}
+.link_contacts{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.li_contacts:not(:last-child){
+    margin-bottom: 50px;
+}
+.value_li_contacts{
+    font-family: var(--font);
+    font-style: normal;
+    font-weight: var(--l-fw);
+    font-size: var(--h2-size);
+    line-height: 36px;
+    color: black;
+}
+.svg_icon_contacts{
+    margin-bottom: 15px;
+}
+.container_social_media_contacts{
+    display: flex;
+    justify-content: center;
+}
+.icon_socia_media_contacts{
+    fill: var(--b-orange);
+    width: 18px;
+    height: 18px;
+}
+.social_media_contacts:not(:last-child){
+    margin-right: 8px;
+}

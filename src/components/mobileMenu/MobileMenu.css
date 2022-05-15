@@ -70,3 +70,6 @@
   display: flex;
   justify-content: center;
 }
+.mobileMenu_element_menu{
+  cursor: pointer;
+}

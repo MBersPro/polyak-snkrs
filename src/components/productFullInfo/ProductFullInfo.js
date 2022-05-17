@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import ImageGallery from "react-image-gallery";
 import "./ProductFullInfo.css";
 
-const ProductFullInfo = ({ product }) => {
+const ProductFullInfo = ({ product, addToKorzina, changePage }) => {
   const [productImages, setProductImages] = useState([]);
 
   useEffect(() => {
@@ -14,14 +14,25 @@ const ProductFullInfo = ({ product }) => {
     );
   }, []);
 
-  console.log(productImages);
+  const onAddToKorzina = () => {
+    addToKorzina();
+  };
+
+  const onBack = () => {
+    changePage("main");
+  };
 
   return (
     <>
       <div className="overlay">
-        <div className="container"><ImageGallery items={productImages} /></div>
+        <div className="container">
+          <ImageGallery items={productImages} />
+          <button onClick={onAddToKorzina} type="button">
+            Добавить в корзину
+          </button>
+          <button onClick={onBack} type="button">Назад</button>
+        </div>
       </div>
-      
     </>
   );
 };

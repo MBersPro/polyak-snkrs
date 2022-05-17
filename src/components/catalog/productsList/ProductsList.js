@@ -9,14 +9,14 @@ const ProductsList = ({ changePage, setProduct }) => {
     getProducts().then((response) => setProducts([...response]));
   }, []);
 
-  const openProduct = (product) => {    
+  const openProduct = (product) => {
     setProduct(product);
     changePage("product");
   };
 
   return (
     <div>
-      <ul>
+      <ul className="catalog_products-container">
         {products.map((product) => (
           <li onClick={() => openProduct(product)} key={product.id}>
             <div className="productList_image_container">
@@ -26,6 +26,11 @@ const ProductsList = ({ changePage, setProduct }) => {
                 src={product.images[0]}
               />
             </div>
+            <p>
+                    <span>{product.brand}</span>
+                    <span>{product.model}</span>
+            </p>
+            <p>{product.price} ₽</p>
           </li>
         ))}
       </ul>

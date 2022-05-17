@@ -13,6 +13,7 @@ const App = () => {
   const [page, setPage] = useState({ main: true });
   const [mobileMenu, setMobileMenu] = useState(false);
   const [product, setProduct] = useState({});
+  const [korzina, setKorzina] = useState([]);
 
   const changeMobileMenu = () => {
     setMobileMenu((prev) => !prev);
@@ -25,6 +26,13 @@ const App = () => {
   const changePage = (page) => {
     setPage({ [page]: true });
   };
+
+  const addToKorzina = () => {
+    setKorzina((prev) => [...prev, product]);
+  };
+
+  console.log(korzina)
+
   return (
     <>
       <Screen>
@@ -34,6 +42,7 @@ const App = () => {
             mobileMenu={mobileMenu}
             changePage={changePage}
             closeMobileMenu={closeMobileMenu}
+            korzina={korzina}
           />
         </Header>
       </Screen>
@@ -42,7 +51,13 @@ const App = () => {
       <Questions />
       <Reviews />
       <Footer />
-      {page.product && <ProductFullInfo product={product} />}
+      {page.product && (
+        <ProductFullInfo
+          changePage={changePage}
+          addToKorzina={addToKorzina}
+          product={product}
+        />
+      )}
     </>
   );
 };

@@ -14,12 +14,13 @@
   z-index: 100;
   transition: 0.4s;
   color: black;
-  background-color: rgb(255, 255, 255);
+  background-color: rgba(255, 255, 255, 0.496);
   transform: translateX(0%);
   transition: 1s;
   position: fixed;
   right: 0;
 }
+
 .container_mobile_menu{
   padding-top: 80px;
   padding-bottom: 70px;

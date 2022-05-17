@@ -14,15 +14,19 @@ const App = () => {
   const [mobileMenu, setMobileMenu] = useState(false);
   const [product, setProduct] = useState({});
   const [korzina, setKorzina] = useState([]);
-
+  
+  const body = document.querySelector("body")
+  const overflowBody = mobileMenu ? "scroll" : "hidden"
   const changeMobileMenu = () => {
-    setMobileMenu((prev) => !prev);
-    setPage({ main: true });
-  };
+    setMobileMenu((prev) => !prev)
+    setPage({main: true})
+    body.style.overflow = `${overflowBody}`
+  }
 
   const closeMobileMenu = () => {
     setMobileMenu(false);
   };
+
   const changePage = (page) => {
     setPage({ [page]: true });
   };
@@ -30,8 +34,6 @@ const App = () => {
   const addToKorzina = () => {
     setKorzina((prev) => [...prev, product]);
   };
-
-  console.log(korzina)
 
   return (
     <>

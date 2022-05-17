@@ -4,13 +4,14 @@ import { ReactComponent as Logo } from "./svg/logo.svg";
 import Hamburger from "hamburger-react";
 
 const Header = ({ mobileMenu, children, changeMobileMenu}) => {
+
   return (
 
     <div
       className={mobileMenu ? "mobile_header_active" : "mobile_header_passive"}
     >
-      <div className="container header_container">
-        <Logo className="header_logo" />
+      <div className="container header_container" id="ggg">
+        <Logo className="header_logo"/>
         <Hamburger
           toggled={mobileMenu}
           toggle={changeMobileMenu}

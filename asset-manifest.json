@@ -1,19 +1,21 @@
 {
   "files": {
-    "main.css": "/polyak-snkrs/static/css/main.fce0ee77.css",
-    "main.js": "/polyak-snkrs/static/js/main.cab787ca.js",
+    "main.css": "/polyak-snkrs/static/css/main.5e3581e4.css",
+    "main.js": "/polyak-snkrs/static/js/main.228d2756.js",
     "static/media/screen_bg-img.jpg": "/polyak-snkrs/static/media/screen_bg-img.9ddc5c6c4074dc75a3ad.jpg",
     "static/media/iphone.png": "/polyak-snkrs/static/media/iphone.abef437569a5f9566e84.png",
     "static/media/logo.svg": "/polyak-snkrs/static/media/logo.4b05fb91b24aab57aac0d8671ff30504.svg",
     "static/media/whatsapp.svg": "/polyak-snkrs/static/media/whatsapp.2db65d331fb34fd94cf86fde2d8d89dd.svg",
     "static/media/telegram.svg": "/polyak-snkrs/static/media/telegram.b46c2ea02c46f7b461395f37b11e9837.svg",
     "static/media/instagram.svg": "/polyak-snkrs/static/media/instagram.3e1d2662f3b0746c1e2d12ce43fc8286.svg",
+    "static/media/phone.svg": "/polyak-snkrs/static/media/phone.2053f3ea8741d55425d7e09790b84ee5.svg",
+    "static/media/mail.svg": "/polyak-snkrs/static/media/mail.708165d0e96456ec1664d66860cad8af.svg",
     "index.html": "/polyak-snkrs/index.html",
-    "main.fce0ee77.css.map": "/polyak-snkrs/static/css/main.fce0ee77.css.map",
-    "main.cab787ca.js.map": "/polyak-snkrs/static/js/main.cab787ca.js.map"
+    "main.5e3581e4.css.map": "/polyak-snkrs/static/css/main.5e3581e4.css.map",
+    "main.228d2756.js.map": "/polyak-snkrs/static/js/main.228d2756.js.map"
   },
   "entrypoints": [
-    "static/css/main.fce0ee77.css",
-    "static/js/main.cab787ca.js"
+    "static/css/main.5e3581e4.css",
+    "static/js/main.228d2756.js"
   ]
 }

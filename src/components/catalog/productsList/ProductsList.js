@@ -1,18 +1,24 @@
 import React, { useState, useEffect } from "react";
-import "./ProductList.css"
+import "./ProductList.css";
 import { getProducts } from "../../../utils/firebase";
 
-const ProductsList = () => {
+const ProductsList = ({ changePage, setProduct }) => {
   const [products, setProducts] = useState([]);
+
   useEffect(() => {
     getProducts().then((response) => setProducts([...response]));
   }, []);
+
+  const openProduct = (product) => {    
+    setProduct(product);
+    changePage("product");
+  };
 
   return (
     <div>
       <ul>
         {products.map((product) => (
-          <li key={product.id}>
+          <li onClick={() => openProduct(product)} key={product.id}>
             <div className="productList_image_container">
               <img
                 className="productList_image"

@@ -26,7 +26,7 @@ const ProductFullInfo = ({ product, addToKorzina, changePage }) => {
   return (
     <>
       <div className="overlay">
-        <div className="container">
+        <div className="container_productFullInfo container">
           <button
             onClick={onBack}
             type="button"

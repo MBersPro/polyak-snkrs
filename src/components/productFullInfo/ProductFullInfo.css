@@ -2,17 +2,16 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   overflow: auto;
-  display: flex;
   background-color: rgb(255, 255, 255);
   z-index: 100;
 }
 
-.productFullInfo-container{
-  padding-top: 15px;
-  padding-bottom: 30px;
+.productFullInfo_container{
+  padding-top: 10px;
+  padding-bottom: 50px;
 }
 
 .productFullInfo_image{

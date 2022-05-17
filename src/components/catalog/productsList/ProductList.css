@@ -1,3 +1,9 @@
+.catalog_products-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
 .productList_image_container{
     width: 160px;
     height: 160px;

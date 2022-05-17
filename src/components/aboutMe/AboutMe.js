@@ -1,9 +1,10 @@
 import React from 'react';
 import './AboutMe.css'
 const AboutMe = () => {
+
     return (
         <div className='container_AboutMe container' id="aboutMe">
-            <h2 className='h2_AboutMe'>ОБО МНЕ</h2>
+            <h2 className='h2_AboutMe' id="hgg">ОБО МНЕ</h2>
             <p className='txt_AboutMe'>
                 Lorem Ipsum является текст-заполнитель обычно 
                 используется в графических, печать и издательской индустрии 

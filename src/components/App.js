@@ -13,19 +13,20 @@ import Screen from "./screen/Screen";
 const App = () => {
   const [page, setPage] = useState({ main: true });
   const [mobileMenu, setMobileMenu] = useState(false);
-
+  const body = document.querySelector("body")
+  const overflowBody = mobileMenu ? "scroll" : "hidden"
   const changeMobileMenu = () => {
     setMobileMenu((prev) => !prev)
     setPage({main: true})
+    body.style.overflow = `${overflowBody}`
   }
 
   const closeMobileMenu = () => {
-    setMobileMenu(false)
+    setMobileMenu(false) 
   }
   const changePage = (page) => {
     setPage({[page]: true});
   };
-  console.log(mobileMenu);
   return (
         <>
           <Screen>

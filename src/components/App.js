@@ -25,6 +25,7 @@ const App = () => {
 
   const closeMobileMenu = () => {
     setMobileMenu(false);
+    body.style.overflow = `${overflowBody}`
   };
 
   const changePage = (page) => {

@@ -14,7 +14,7 @@
   z-index: 100;
   transition: 0.4s;
   color: black;
-  background-color: rgba(255, 255, 255, 0.496);
+  background-color: rgb(255, 255, 255);
   transform: translateX(0%);
   transition: 1s;
   position: fixed;

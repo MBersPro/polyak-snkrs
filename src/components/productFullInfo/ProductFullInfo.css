@@ -5,6 +5,96 @@
   width: 100%;
   height: 100vh;
   display: flex;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgb(255, 255, 255);
   z-index: 1200;
+  padding: 10px 15px;
+}
+.image-gallery-svg{
+  color: red;
+  width: 20px;
+  height: 20px;
+}
+.productFullInfo_image{
+  width: 100%;
+  height: 100%;
+}
+.productFullInfo_image_container{
+  width: 100%;
+  height: 370px;
+  margin-bottom: 50px;
+}
+.productFullInfo_name_product{
+  font-family: var(--font);
+  font-style: normal;
+  font-weight: var(--r-fw);
+  font-size: var(--h2-size);
+  line-height: 36px;
+  color: #000000;
+  margin-bottom: 10px;
+}
+.productFullInfo_price_product{
+  font-family: var(--font);
+  font-style: normal;
+  font-weight: var(--l-fw);
+  font-size: 14px;
+  line-height: 21px;
+  color: #000000;
+  margin-bottom: 7px;
+}
+.productFullInfo_shoe_description{
+  font-family: var(--font);
+  font-style: normal;
+  font-weight: var(--l-fw);
+  font-size: 14px;
+  line-height: 21px;
+  color: #808080;
+  margin-bottom: 28px;
+}
+.productFullInfo_color_model{
+  font-family: var(--font);
+  font-style: normal;
+  font-weight: var(--l-fw);
+  font-size: 14px;
+  line-height: 21px;
+  color: #808080;
+  margin-bottom: 20px;
+}
+.productFullInfo_shoe_size{
+  font-family: var(--font);
+  font-style: normal;
+  font-weight: var(--l-fw);
+  font-size: 14px;
+  line-height: 21px;
+  color: #808080;
+  margin-bottom: 10px;
+}
+.productFullInfo_input_size{
+  width: 112px;
+  height: 24px;
+  border: 1px solid #808080;
+  color: #808080;
+  border-radius: 2px;
+  margin-bottom: 29px;
+}
+.productFullInfo_addToBasket_btn{
+  width: 100%;
+  height: 70px;
+  border: none;
+  font-family: var(--font);
+  font-style: normal;
+  font-weight: var(--r-fw);
+  font-size: var(--h2-size);
+  line-height: 36px;
+  background-color: #FB6702;
+  color: #000000;
+}
+.productFullInfo_back_btn{
+  background-color: #00000000;
+  color: black;
+  border: none;
+  font-family: var(--font);
+  font-weight: var(--r-fw);
+  font-size: 18px;
+  padding: 0;
+  margin-bottom: 25px;
 }

@@ -8,10 +8,10 @@ const ProductsList = ({ changePage, setProduct }) => {
   useEffect(() => {
     getProducts().then((response) => setProducts([...response]));
   }, []);
-
   const openProduct = (product) => {
     setProduct(product);
     changePage("product");
+    document.querySelector('body').style.overflow = "hidden"
   };
 
   return (
@@ -26,11 +26,11 @@ const ProductsList = ({ changePage, setProduct }) => {
                 src={product.images[0]}
               />
             </div>
-            <p>
+            <p className="productList_name_product">
                     <span>{product.brand}</span>
                     <span>{product.model}</span>
             </p>
-            <p>{product.price} ₽</p>
+            <p className="productList_price_product">{product.price} ₽</p>
           </li>
         ))}
       </ul>

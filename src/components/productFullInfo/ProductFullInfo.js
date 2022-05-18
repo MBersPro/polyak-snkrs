@@ -41,13 +41,11 @@ const ProductFullInfo = ({ product, addToKorzina, changePage }) => {
           </p>
           <p className="productFullInfo_price_product">{product.price} ₽</p>
           <div className="productFullInfo_image_container">
-            <ImageGallery
-              thumbnailPosition="left"
-              items={productImages}
-              showPlayButton={false}
-              showFullscreenButton={false}
-              showNav={false}
-            />
+          <img
+                    className="productList_image"
+                    alt="sneakers"
+                    src={product.images[0]}
+                  />
           </div>
           <p className="productFullInfo_shoe_size">Выбрать размер</p>
           <input value="3.5Y" className="productFullInfo_input_size" />

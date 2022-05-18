@@ -69,6 +69,7 @@
   color: #808080;
   margin-bottom: 10px;
 }
+
 .productFullInfo_input_size{
   width: 112px;
   height: 24px;
@@ -89,6 +90,11 @@
   background-color: #FB6702;
   color: #000000;
 }
+
+.some:active {
+   border: 1px solid red; 
+}
+
 .productFullInfo_back_btn{
   background-color: #00000000;
   color: black;

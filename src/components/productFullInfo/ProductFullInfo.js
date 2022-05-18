@@ -3,16 +3,17 @@ import ImageGallery from "react-image-gallery";
 import "./ProductFullInfo.css";
 
 const ProductFullInfo = ({ product, addToKorzina, changePage }) => {
-  const [productImages, setProductImages] = useState([]);
+   const [productImages, setProductImages] = useState([]);
 
-  useEffect(() => {
-    setProductImages(
-      product.images.map((image) => ({
-        original: image,
-        thumbnail: image,
-      }))
-    );
-  }, []);
+   useEffect(() => {
+     setProductImages(
+       product.images.map((image) => ({
+         original: image,
+         thumbnail: image,
+         thumbnailClass: "some"
+       }))
+     );
+   }, []);
 
   const onAddToKorzina = () => {
     addToKorzina();
@@ -40,21 +41,18 @@ const ProductFullInfo = ({ product, addToKorzina, changePage }) => {
           </p>
           <p className="productFullInfo_price_product">{product.price} ₽</p>
           <div className="productFullInfo_image_container">
-            <ImageGallery items={productImages} showPlayButton={false} />
-            {/* <img
-              className="productFullInfo_image"
-              alt="sneakers"
-              src={product.images[0]}
-            /> */}
+            <ImageGallery
+              thumbnailPosition="left"
+              items={productImages}
+              showPlayButton={false}
+              showFullscreenButton={false}
+              showNav={false}
+            />
           </div>
           <p className="productFullInfo_shoe_size">Выбрать размер</p>
           <input value="3.5Y" className="productFullInfo_input_size" />
           <p className="productFullInfo_shoe_description">
-            Кроссовки Air Jordan 1 Mid, дизайн которых вдохновлен оригинальной
-            <br /> моделью AJ1, дают фанатам возможность пойти по стопам Майкла
-            <br /> Джордана. Элементы отделки свежих цветов и классические
-            материалы
-            <br /> привносят новизну в привычный образ.
+            {product.description}
           </p>
           <p className="productFullInfo_color_model">Цвет модели:</p>
           <button

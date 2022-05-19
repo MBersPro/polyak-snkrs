@@ -25,7 +25,7 @@ const ProductsList = ({ changePage, setProduct }) => {
                 <img
                   className="productList_image"
                   alt="sneakers"
-                  src={product.images[0]}
+                  src={product.catalogImage}
                 />
               </div>
               <p className="productList_name_product">

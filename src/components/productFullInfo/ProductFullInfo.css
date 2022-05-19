@@ -9,7 +9,7 @@
   z-index: 100;
 }
 
-.productFullInfo_container{
+.container_productFullInfo{
   padding-top: 10px;
   padding-bottom: 50px;
 }
@@ -22,6 +22,24 @@
 .productFullInfo_image_container{
   width: 100%;
   margin-bottom: 50px;
+  position: relative;
+}
+
+.productFullInfo_rotationLeft_container {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 15%;
+  z-index: 3;
+}
+.productFullInfo_rotationRight_container {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 15%;
+  z-index: 3;
 }
 
 .productFullInfo_name_product{

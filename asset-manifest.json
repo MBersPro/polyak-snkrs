@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/polyak-snkrs/static/css/main.4cd1be0e.css",
-    "main.js": "/polyak-snkrs/static/js/main.e60ce662.js",
+    "main.css": "/polyak-snkrs/static/css/main.2013c2a7.css",
+    "main.js": "/polyak-snkrs/static/js/main.3a6b406e.js",
     "static/media/screen_bg-img.jpg": "/polyak-snkrs/static/media/screen_bg-img.9ddc5c6c4074dc75a3ad.jpg",
     "static/media/iphone.png": "/polyak-snkrs/static/media/iphone.abef437569a5f9566e84.png",
     "static/media/logo.svg": "/polyak-snkrs/static/media/logo.4b05fb91b24aab57aac0d8671ff30504.svg",
@@ -11,11 +11,12 @@
     "static/media/phone.svg": "/polyak-snkrs/static/media/phone.2053f3ea8741d55425d7e09790b84ee5.svg",
     "index.html": "/polyak-snkrs/index.html",
     "static/media/mail.svg": "/polyak-snkrs/static/media/mail.708165d0e96456ec1664d66860cad8af.svg",
-    "main.4cd1be0e.css.map": "/polyak-snkrs/static/css/main.4cd1be0e.css.map",
-    "main.e60ce662.js.map": "/polyak-snkrs/static/js/main.e60ce662.js.map"
+    "static/media/delBtn.svg": "/polyak-snkrs/static/media/delBtn.3d444ff8a6d6a528e484cfd71e1d4fa1.svg",
+    "main.2013c2a7.css.map": "/polyak-snkrs/static/css/main.2013c2a7.css.map",
+    "main.3a6b406e.js.map": "/polyak-snkrs/static/js/main.3a6b406e.js.map"
   },
   "entrypoints": [
-    "static/css/main.4cd1be0e.css",
-    "static/js/main.e60ce662.js"
+    "static/css/main.2013c2a7.css",
+    "static/js/main.3a6b406e.js"
   ]
 }

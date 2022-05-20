@@ -1,5 +1,5 @@
 import React from "react";
-
+import './CatalogHead.css'
 const CatalogHead = () => {
   return (
     <div className="catalog_head">

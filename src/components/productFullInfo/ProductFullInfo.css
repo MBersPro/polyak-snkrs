@@ -21,6 +21,8 @@
 
 .productFullInfo_image_container{
   width: 100%;
+  object-fit: cover;
+  height: 372px;
   margin-bottom: 50px;
   position: relative;
 }
@@ -122,4 +124,20 @@
   font-size: 18px;
   padding: 0;
   margin-bottom: 25px;
+}
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 3s;
+  animation-name: fade;
+  animation-duration: 3s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
 }

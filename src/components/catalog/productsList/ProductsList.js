@@ -19,7 +19,7 @@ const ProductsList = ({ changePage, setProduct }) => {
     <div>
       <ul className="catalog_products-container">
         {products.map((product) => (
-          <li onClick={() => openProduct(product)} key={product.id}>
+          <li onClick={() => openProduct(product)} key={product.id} className="product">
             <div className="cell">
               <div className="productList_image_container">
                 <img

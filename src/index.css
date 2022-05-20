@@ -33,14 +33,22 @@ p {
   margin-top: 0;
   margin-bottom: 0;
 }
-
-h2 {
-  font-size: var(--h2-size);
-  font-weight: var(--r-fw);
-  font-family: var(--font);
-  color: var(--b-orange);
+@media screen and (max-width: 767px) {
+  h2 {
+    font-size: var(--h2-mobile-size);
+    font-weight: var(--r-fw);
+    font-family: var(--font);
+    color: var(--b-orange);
+  }
 }
-
+@media (max-width: 1200px) and (min-width: 768px) {
+  h2 {
+    font-size: var(--h2-tablet-size);
+    font-weight: var(--r-fw);
+    font-family: var(--font);
+    color: var(--b-orange);
+  }
+}
 ul,
 ol {
   margin-top: 0;
@@ -59,21 +67,31 @@ a {
 img {
   display: block;
 }
-
-.container {
-  margin-left: auto;
-  margin-right: auto;
-  min-width: 320px;
-  max-width: 480px;
-  box-sizing: border-box;
-  padding-left: 15px;
-  padding-right: 15px;
+@media screen and (max-width: 767px) {
+  .container {
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 320px;
+    max-width: 480px;
+    box-sizing: border-box;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 }
-
+@media (max-width: 1200px) and (min-width: 768px) {
+  .container {
+    margin-left: auto;
+    margin-right: auto;
+    width: 768px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
 :root {
   --b-orange: #fc6701;
   --font: "Oswald", sans-serif;
   --l-fw: 300;
   --r-fw: 400;
-  --h2-size: 24px;
+  --h2-mobile-size: 24px;
+  --h2-tablet-size: 36px;
 }

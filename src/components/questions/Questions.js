@@ -8,7 +8,6 @@ const Questions = () => {
                 <li className='li_question'>
                     <details className='detail_question'>
                         <summary className='summary_question'>
-                            <span className='plus_icon_question'>+</span> 
                             Как происходит оплата ?
                         </summary>
                         Текст
@@ -17,8 +16,7 @@ const Questions = () => {
 
                 <li className='li_question'>
                     <details className='detail_question'>
-                        <summary className='summary_question'>
-                            <span className='plus_icon_question'>+</span> 
+                        <summary className='summary_question'> 
                             Как происходит доставка ?
                         </summary>
                         Текст
@@ -27,8 +25,7 @@ const Questions = () => {
 
                 <li className='li_question'>
                     <details className='detail_question'>
-                        <summary className='summary_question'>
-                            <span className='plus_icon_question'>+</span> 
+                        <summary className='summary_question'> 
                             Как оформить заказ ?
                         </summary>
                         Текст
@@ -37,8 +34,7 @@ const Questions = () => {
 
                 <li className='li_question'>
                     <details className='detail_question'>
-                        <summary className='summary_question'>
-                            <span className='plus_icon_question'>+</span> 
+                        <summary className='summary_question'> 
                             Вся продукция оригинальная ?
                         </summary>
                         Текст
@@ -47,8 +43,7 @@ const Questions = () => {
 
                 <li className='li_question'>
                     <details className='detail_question'>
-                        <summary className='summary_question'>
-                            <span className='plus_icon_question'>+</span> 
+                        <summary className='summary_question'> 
                             Почему цена зависит от размера ?
                         </summary>
                         Текст
@@ -57,8 +52,7 @@ const Questions = () => {
 
                 <li className='li_question'>
                     <details className='detail_question'>
-                        <summary className='summary_question'>
-                            <span className='plus_icon_question'>+</span> 
+                        <summary className='summary_question'> 
                             Как формируются цены на сайте ?
                         </summary>
                         Текст
@@ -67,8 +61,7 @@ const Questions = () => {
 
                 <li className='li_question'>
                     <details className='detail_question'>
-                        <summary className='summary_question'>
-                            <span className='plus_icon_question'>+</span> 
+                        <summary className='summary_question'> 
                             Что делать, если размер мне не подошел ?
                         </summary>
                         Текст

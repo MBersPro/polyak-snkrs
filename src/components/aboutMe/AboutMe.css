@@ -1,12 +1,28 @@
-.container_AboutMe{
+@media screen and (max-width: 767px) {
+  .container_AboutMe{
+      padding-top: 50px;
+      padding-bottom: 50px;
+  }
+  .h2_AboutMe{
+      margin-bottom: 20px;
+  }
+  .txt_AboutMe{
+    font-size: var(--h2-size);
+    font-weight: var(--r-fw);
+    font-family: var(--font);
+  }
+}
+@media (max-width: 1200px) and (min-width: 768px) {
+  .container_AboutMe{
     padding-top: 50px;
     padding-bottom: 50px;
-}
-.h2_AboutMe{
-    margin-bottom: 20px;
-}
-.txt_AboutMe{
-  font-size: var(--h2-size);
-  font-weight: var(--r-fw);
-  font-family: var(--font);
+  }
+  .h2_AboutMe{
+    margin-bottom: 30px;
+  }
+  .txt_AboutMe{
+    font-size: 32px;
+    font-weight: var(--l-fw);
+    font-family: var(--font);
+  }
 }

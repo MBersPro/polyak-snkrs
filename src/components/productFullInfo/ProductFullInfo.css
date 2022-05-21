@@ -17,11 +17,11 @@
 .productFullInfo_image{
   width: 100%;
   height: 100%;
+  object-fit: cover;
 }
 
 .productFullInfo_image_container{
   width: 100%;
-  object-fit: cover;
   height: 372px;
   margin-bottom: 50px;
   position: relative;

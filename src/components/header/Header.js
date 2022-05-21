@@ -10,7 +10,7 @@ const Header = ({ mobileMenu, children, changeMobileMenu}) => {
     <div
       className={mobileMenu ? "mobile_header_active" : "mobile_header_passive"}
     >
-      <div className="container header_container" id="ggg">
+      <div className="container header_container">
         <Logo className="header_logo"/>
         <Hamburger
           toggled={mobileMenu}

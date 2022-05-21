@@ -36,12 +36,12 @@
 }
 .summary_question:before {
     content: '>';
-    font-size: 46px;
+    font-size: 36px;
     margin-right: 20px;
   }
 .detail_question[open] .summary_question:before {
     content: '˅';
-    font-size: 36px;
+    font-size: 26px;
     margin-right: 20px;
 }
 .summary_question::-webkit-details-marker {
@@ -118,12 +118,11 @@
     }
     .summary_question:before {
         content: '>';
-        font-size: 46px;
+
         margin-right: 20px;
       }
     .detail_question[open] .summary_question:before {
         content: '˅';
-        font-size: 36px;
         margin-right: 20px;
     }
     .summary_question{
@@ -136,6 +135,10 @@
         -khtml-user-select: none;
         user-select: none;
         transition: 0.5s;
+        outline: none;
+    }
+    .summary_question:focus, .summary_question:active{
+        outline: none;
     }
     .summary_question:hover{
         color: var(--b-orange);

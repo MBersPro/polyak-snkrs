@@ -4,14 +4,13 @@
         flex-wrap: wrap;
         justify-content: space-between;
     }
-    .product:not(:last-child){
+    .product:not(:nth-last-of-type(-n+2)){
         margin-bottom: 18px;
     }
     .productList_image_container{
         width: 177px;
-        height: 160px;
+        height: 159px;
         margin-bottom: 4px;
-        
     }
     .productList_image{
         width: 100%;
@@ -26,10 +25,11 @@
         font-style: normal;
         font-weight: var(--l-fw);
         font-size: 14px;
-        line-height: 36px;
+        line-height: 21px;
         color: #000000;
-        margin-bottom: 10px;
+        margin-bottom: 9px;
         max-width: 177px;
+        text-align: center;
     }
     .productList_price_product{
         font-family: var(--font);
@@ -37,7 +37,8 @@
         font-weight: var(--l-fw);
         font-size: 14px;
         line-height: 21px;
-        color: #000000;
+        color: rgba(0, 0, 0, 0.5);
+        text-align: center;
     }
 }
 @media (max-width: 1200px) and (min-width: 768px) {
@@ -46,10 +47,8 @@
         flex-wrap: wrap;
         justify-content: space-between;
     }
-/* Это временно
-надо будет изменить */
-    .product:not(:last-child){
-        margin-bottom: 33px;
+    .product:not(:nth-last-of-type(-n+2)){
+        margin-bottom: 35px;
     }
     .productList_image_container{
         width: 357px;
@@ -69,17 +68,19 @@
         font-style: normal;
         font-weight: var(--l-fw);
         font-size: 32px;
-        line-height: 36px;
+        line-height: 47px;
         color: #000000;
-        margin-bottom: 10px;
+        margin-bottom: 17px;
         max-width: 357px;
+        text-align: center;
     }
     .productList_price_product{
         font-family: var(--font);
         font-style: normal;
         font-weight: var(--l-fw);
         font-size: 24px;
-        line-height: 21px;
-        color: #000000;
+        line-height: 36px;
+        color: rgba(0, 0, 0, 0.5);
+        text-align: center;
     }
 }

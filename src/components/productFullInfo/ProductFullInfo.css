@@ -30,13 +30,47 @@
 .productFullInfo_rotationLeft_container {
   position: absolute;
   left: 0;
-  top: 0;
+  top:0;
+  display: flex;
+  align-items: center;
   height: 100%;
   width: 15%;
   z-index: 3;
 }
+.right{
+  position: absolute;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  background-color: #000000;
+  color: white;
+  border: 1px solid black;
+  font-size: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+.left{
+  position: absolute;
+  left: 20px;
+  width: 40px;
+  height: 40px;
+  background-color: #000000;
+  border: 1px solid black;
+  font-size: 30px;
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
 .productFullInfo_rotationRight_container {
   position: absolute;
+  display: flex;
+  align-items: center;
   right: 0;
   top: 0;
   height: 100%;

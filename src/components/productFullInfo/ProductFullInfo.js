@@ -52,7 +52,7 @@ const ProductFullInfo = ({ product, addToKorzina, changePage }) => {
               onClick={rotationLeft}
               className="productFullInfo_rotationLeft_container"
             >
-              <button type="button"></button>
+              <button type="button" className="left">❮</button>
             </div>
             <img
               className="productFullInfo_image"
@@ -63,7 +63,7 @@ const ProductFullInfo = ({ product, addToKorzina, changePage }) => {
               onClick={rotationRight}
               className="productFullInfo_rotationRight_container"
             >
-              <button type="button"></button>
+              <button type="button"  className="right">❯</button>
             </div>
           </div>
           <p className="productFullInfo_shoe_size">Выбрать размер</p>

@@ -1,7 +1,7 @@
 @media screen and (max-width: 767px) {
   .container_AboutMe{
-      padding-top: 50px;
-      padding-bottom: 50px;
+      padding-top: 25px;
+      padding-bottom: 25px;
   }
   .h2_AboutMe{
       margin-bottom: 20px;
@@ -15,7 +15,7 @@
 @media (max-width: 1200px) and (min-width: 768px) {
   .container_AboutMe{
     padding-top: 50px;
-    padding-bottom: 50px;
+    padding-bottom: 100px;
   }
   .h2_AboutMe{
     margin-bottom: 30px;

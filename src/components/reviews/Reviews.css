@@ -2,11 +2,11 @@
     .container_reviews{
         display: flex;
         flex-direction: column;
-        padding-top: 30px;
-        padding-bottom: 44px;
+        padding-top: 25px;
+        padding-bottom: 50px;
     }
     .h2_reviews{
-        margin-bottom: 27px;
+        margin-bottom: 58px;
     }
     .iphone_img_reviews{
         width: 156px;
@@ -72,11 +72,11 @@
     .container_reviews{
         display: flex;
         flex-direction: column;
-        padding-top: 30px;
-        padding-bottom: 44px;
+        padding-top: 50px;
+        padding-bottom: 100px;
     }
     .h2_reviews{
-        margin-bottom: 100px;
+        margin-bottom: 82px;
     }
     .iphone_img_reviews{
         width: 489.67px;
@@ -116,14 +116,6 @@
         border: 1px solid var(--b-orange);
         border-radius: 2px;
         margin-bottom: 42px;
-        padding: 0px 0px 0px 23px;
-    }
-    .input_reviews::placeholder{
-        font-family: var(--font);
-        font-style: normal;
-        font-weight: var(--l-fw);
-        font-size: 20px;
-        color: #808080;
     }
     .send_btn_reviews{
         width: 281px;

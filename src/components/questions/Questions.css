@@ -33,12 +33,12 @@
         transition: 0.5s;
     }
     .summary_question:before {
-        content: '+';
+        content: '➕';
         margin-right: 20px;
         font-weight: var(--r-fw);
     }
     .detail_question[open] .summary_question:before {
-        content: '−';
+        content: '➖';
         margin-right: 20px;
         font-size: 24px;
     }
@@ -114,12 +114,11 @@
         margin-bottom: 105px;
     }
     .summary_question:before {
-        content: '+';
-
+        content: '➕';
         margin-right: 42px;
       }
     .detail_question[open] .summary_question:before {
-        content: '−';
+        content: '➖';
         margin-right: 42px;
     }
     .summary_question{

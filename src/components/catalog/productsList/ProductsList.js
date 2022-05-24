@@ -1,42 +1,76 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import "./ProductList.css";
 import { getProducts } from "../../../utils/firebase";
 import Slider from "react-slick";
+import Product from "./productsSlide/Product";
+
+const chunk = (input, size) => {
+  return input.reduce((arr, item, idx) => {
+    return idx % size === 0
+      ? [...arr, [item]]
+      : [...arr.slice(0, -1), [...arr.slice(-1)[0], item]];
+  }, []);
+};
+
+let interval = null;
 
 const ProductsList = ({ changePage, setProduct }) => {
   const [products, setProducts] = useState([]);
+  const [currentSlide, setCurrentSlide] = useState(1);
 
   useEffect(() => {
     getProducts().then((response) => setProducts([...response]));
+    return () => {clearInterval(interval)}
   }, []);
   const openProduct = (product) => {
     setProduct(product);
     changePage("product");
-    document.querySelector("body").style.overflow = "hidden";
+    //document.querySelector("body").style.overflow = "hidden";
   };
 
+  const chunkedProducts = useMemo(() => chunk(products, 4), [products]) 
+
+
+
+   useEffect(() => {
+     if (!chunkedProducts.length) return;
+     if (interval) return;
+     interval = setInterval(() => {
+       setCurrentSlide((prev) => {
+         console.log(chunkedProducts);
+         if (chunkedProducts.length - 1 <= prev) {
+           return 0;
+         }
+         return prev + 1;
+       });
+     }, 3000);
+   }, [chunkedProducts]);
+
+  console.log(currentSlide);
+
   return (
-    <div>
-      <ul className="catalog_products-container">
-        {products.map((product) => (
-          <li onClick={() => openProduct(product)} key={product.id} className="product">
-            <div className="cell">
-              <div className="productList_image_container">
-                <img
-                  className="productList_image"
-                  alt="sneakers"
-                  src={product.catalogImage}
-                />
-              </div>
-              <p className="productList_name_product">
-                <span>{product.brand}</span>
-                <span>{product.model}</span>
-              </p>
-              <p className="productList_price_product">{product.price} ₽</p>
-            </div>
-          </li>
+    <div className="carousel">
+       <div
+         style={{
+           transform: `translateX(-${currentSlide * 100}%)`,
+         }}
+         className="carousel-inner"
+      >
+        {chunkedProducts.map((products) => (
+          <div
+            className="carousel-item"
+          >
+            {products.map((product) => (
+              <Product openProduct={openProduct} product={product} />
+            ))}
+          </div>
         ))}
-      </ul>
+      </div>
+      <div className="bullets-container">
+        {chunkedProducts.map((product, index) => (
+          <div className="bullets"></div>
+        ))}
+      </div>
     </div>
   );
 };

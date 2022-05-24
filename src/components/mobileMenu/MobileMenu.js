@@ -3,7 +3,7 @@ import Contacts from "../contacts/Contacts";
 import Korzina from "../korzina/Korzina";
 import "./MobileMenu.css";
 
-const MobileMenu = ({ mobileMenu, closeMobileMenu, changePage, page, korzina }) => {
+const MobileMenu = ({ mobileMenu, closeMobileMenu, changePage, page, korzina, orangeColor, blackColor, whiteColor}) => {
   const changeOnContacts = () => {
     changePage("contacts");
   };
@@ -72,9 +72,9 @@ const MobileMenu = ({ mobileMenu, closeMobileMenu, changePage, page, korzina }) 
               </li>
             </ul>
             <div className="div_theme_btn_mobileMenu">
-              <button className="white_theme_btn_mobileMenu"></button>
-              <button className="orange_theme_btn_mobileMenu"></button>
-              <button className="black_theme_btn_mobileMenu"></button>
+              <button className="white_theme_btn_mobileMenu" onClick={whiteColor}></button>
+              <button className="orange_theme_btn_mobileMenu" onClick={orangeColor}></button>
+              <button className="black_theme_btn_mobileMenu" onClick={blackColor}></button>
             </div>
           </>
         )}

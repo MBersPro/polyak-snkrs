@@ -14,8 +14,8 @@ const App = () => {
   const [mobileMenu, setMobileMenu] = useState(false);
   const [product, setProduct] = useState({});
   const [korzina, setKorzina] = useState([]);
-  
   const body = document.querySelector("body")
+  const h2 = document.querySelector('h2')
   const overflowBody = mobileMenu ? "scroll" : "hidden"
   const changeMobileMenu = () => {
     setMobileMenu((prev) => !prev)
@@ -35,7 +35,16 @@ const App = () => {
   const addToKorzina = () => {
     setKorzina((prev) => [...prev, product]);
   };
-
+  const orangeColor = () => {
+    body.style.backgroundColor = '#fc6701'
+    h2.style.color = "black"
+  }
+  const blackColor = () => {
+    body.style.backgroundColor = '#4A4A4A'
+  }
+  const whiteColor = () => {
+    body.style.backgroundColor = 'white'
+  }
   return (
     <>
       <Screen>
@@ -46,6 +55,9 @@ const App = () => {
             changePage={changePage}
             closeMobileMenu={closeMobileMenu}
             korzina={korzina}
+            orangeColor={orangeColor}
+            blackColor={blackColor}
+            whiteColor={whiteColor}
           />
         </Header>
       </Screen>

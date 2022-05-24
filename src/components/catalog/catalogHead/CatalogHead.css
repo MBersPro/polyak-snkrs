@@ -1,26 +1,30 @@
 @media screen and (max-width: 767px) {
     .catalog_filter_li{
-        font-family: 'Oswald';
+        font-family: var(--font);
         font-style: normal;
         font-weight: var(--r-fw);
         font-size: 14px;
         line-height: 23px;
         color: #000000;
     }
-    .catalog_filter_container{
-        margin-bottom: 25px;
+    .catalog_head{
+        margin-bottom: 15px;
+        display: flex;
+        justify-content: space-between;
     }
 }
 @media (max-width: 1200px) and (min-width: 768px) {
     .catalog_filter_li{
-        font-family: 'Oswald';
+        font-family: var(--font);
         font-style: normal;
         font-weight: var(--r-fw);
         font-size: 36px;
         line-height: 23px;
         color: #000000;
     }
-    .catalog_filter_container{
-        margin-bottom: 35px;
+    .catalog_head{
+        margin-bottom: 25px;
+        display: flex;
+        justify-content: space-between;
     }
 }

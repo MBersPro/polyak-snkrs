@@ -9,8 +9,8 @@ const Contacts = () => {
     return (
         <div>
             <ul className='ul_contacts'>
-                <li className='li_contacts'><a href="tel:+79851981025" className='link_contacts'><Phone className='svg_icon_contacts'/><span className='value_li_contacts'>+7 (985) 1981025</span></a></li>
-                <li className='li_contacts'><a href="mailto:andreypolyak9@gmail.com" className='link_contacts'><Mail className='svg_icon_contacts'/><span className='value_li_contacts'>andreypolyak9@gmail.com</span></a></li>
+                <li className='li_contacts'><a href="tel:+79851981025" className='link_contacts'><Phone className='svg_icon_phone_contacts'/><span className='value_li_contacts'>+7 (985) 1981025</span></a></li>
+                <li className='li_contacts'><a href="mailto:andreypolyak9@gmail.com" className='link_contacts'><Mail className='svg_icon_mail_contacts'/><span className='value_li_contacts'>andreypolyak9@gmail.com</span></a></li>
             </ul>
             <div className='container_social_media_contacts'>
                 <a href="https://wa.me/79851981025" className='social_media_contacts'>

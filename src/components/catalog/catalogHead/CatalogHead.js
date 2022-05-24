@@ -3,10 +3,8 @@ import './CatalogHead.css'
 const CatalogHead = () => {
   return (
     <div className="catalog_head">
+      <h2>КАТАЛОГ</h2>
       <ul className="catalog_filter_container">
-        <li>
-          <h2>КАТАЛОГ</h2>
-        </li>
         <li className="catalog_filter_li">Yeezy</li>
         <li className="catalog_filter_li">Jordan</li>
         <li className="catalog_filter_li">Nike</li>

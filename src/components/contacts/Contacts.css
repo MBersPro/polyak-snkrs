@@ -1,37 +1,93 @@
-.ul_contacts{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 50px;
+@media screen and (max-width: 767px) {
+    .ul_contacts{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 50px;
+    }
+    .link_contacts{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .li_contacts:not(:last-child){
+        margin-bottom: 50px;
+    }
+    .value_li_contacts{
+        font-family: var(--font);
+        font-style: normal;
+        font-weight: var(--l-fw);
+        font-size: 24px;
+        line-height: 36px;
+        color: black;
+    }
+    .container_social_media_contacts{
+        display: flex;
+        justify-content: center;
+    }
+    .icon_socia_media_contacts{
+        fill: var(--b-orange);
+        width: 18px;
+        height: 18px;
+    }
+    .social_media_contacts:not(:last-child){
+        margin-right: 8px;
+    }
+    .svg_icon_phone_contacts{
+        margin-bottom: 12px;
+        width: 32px;
+        height: 32px;
+    }
+    .svg_icon_mail_contacts{
+        margin-bottom: 12px;
+        width: 32px;
+        height: 32px;
+    }
 }
-.link_contacts{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.li_contacts:not(:last-child){
-    margin-bottom: 50px;
-}
-.value_li_contacts{
-    font-family: var(--font);
-    font-style: normal;
-    font-weight: var(--l-fw);
-    font-size: var(--h2-size);
-    line-height: 36px;
-    color: black;
-}
-.svg_icon_contacts{
-    margin-bottom: 15px;
-}
-.container_social_media_contacts{
-    display: flex;
-    justify-content: center;
-}
-.icon_socia_media_contacts{
-    fill: var(--b-orange);
-    width: 18px;
-    height: 18px;
-}
-.social_media_contacts:not(:last-child){
-    margin-right: 8px;
+@media (max-width: 1200px) and (min-width: 768px) {
+    .ul_contacts{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 150px;
+    }
+    .link_contacts{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .li_contacts:not(:last-child){
+        margin-bottom: 63px;
+    }
+    .link_contacts{
+        font-family: var(--font);
+        font-style: normal;
+        font-weight: var(--l-fw);
+        font-size: 40px;
+        line-height: 59px;
+        color: black;
+    }
+    .svg_icon_phone_contacts{
+        margin-bottom: 50px;
+        width: 68px;
+        height: 127px;
+        
+    }
+    .svg_icon_mail_contacts{
+        margin-bottom: 50px;
+        width: 87px;
+        height: 82px;
+    }
+    .container_social_media_contacts{
+        display: flex;
+        justify-content: center;
+    }
+    .icon_socia_media_contacts{
+        fill: var(--b-orange);
+        width: 43px;
+        height: 43px;
+    }
+    .social_media_contacts:not(:last-child){
+        margin-right: 18px;
+    }
 }

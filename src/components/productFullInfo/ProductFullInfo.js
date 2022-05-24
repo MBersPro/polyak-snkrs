@@ -30,7 +30,6 @@ const ProductFullInfo = ({ product, addToKorzina, changePage }) => {
     }
     setCurrentImageIndex((prev) => prev - 1);
   };
-
   return (
     <>
       <div className="overlay">
@@ -52,7 +51,7 @@ const ProductFullInfo = ({ product, addToKorzina, changePage }) => {
               onClick={rotationLeft}
               className="productFullInfo_rotationLeft_container"
             >
-              <button type="button"></button>
+              <button type="button" className="left">❮</button>
             </div>
             <img
               className="productFullInfo_image"
@@ -63,11 +62,20 @@ const ProductFullInfo = ({ product, addToKorzina, changePage }) => {
               onClick={rotationRight}
               className="productFullInfo_rotationRight_container"
             >
-              <button type="button"></button>
+              <button type="button"  className="right">❯</button>
             </div>
           </div>
           <p className="productFullInfo_shoe_size">Выбрать размер</p>
-          <input value="3.5Y" className="productFullInfo_input_size" />
+          <select className="select_shoe_size_ProductFullInfo">
+            <option className="option_shoe_size_ProductFullInfo">3.5 Y</option>
+            <option className="option_shoe_size_ProductFullInfo">4.0 Y</option>
+            <option className="option_shoe_size_ProductFullInfo">4.5 Y</option>
+            <option className="option_shoe_size_ProductFullInfo">5.0 Y</option>
+            <option className="option_shoe_size_ProductFullInfo">5.5 Y</option>
+            <option className="option_shoe_size_ProductFullInfo">6.0 Y</option>
+            <option className="option_shoe_size_ProductFullInfo">6.5 Y</option>
+            <option className="option_shoe_size_ProductFullInfo">7.0 Y</option>
+          </select>
           <p className="productFullInfo_shoe_description">
             {product.description}
           </p>

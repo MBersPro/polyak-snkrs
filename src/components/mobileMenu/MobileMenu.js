@@ -13,7 +13,7 @@ const MobileMenu = ({ mobileMenu, closeMobileMenu, changePage, page, korzina, or
 
   return (
     <div className={mobileMenu ? "mobileMenuOpen" : "mobileMenuClose"}>
-      <div className="container_mobile_menu container">
+      <div id="MobMenuCont" className="container_mobile_menu container">
         {page.main && (
           <>
             <ul className="mobileMenu_ul">

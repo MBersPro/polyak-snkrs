@@ -1,3 +1,4 @@
+import { doc } from "firebase/firestore";
 import React, { useState } from "react";
 import AboutMe from "./aboutMe/AboutMe";
 import Catalog from "./catalog/Catalog";
@@ -16,7 +17,9 @@ const App = () => {
   const [korzina, setKorzina] = useState([]);
   const body = document.querySelector("body")
   const h2 = document.querySelector('h2')
+  const MobMenuCont = document.getElementById('MobMenuCont')
   const overflowBody = mobileMenu ? "scroll" : "hidden"
+  const mobileMenuOpen = document.getElementsByClassName('mobileMenuOpen')
   const changeMobileMenu = () => {
     setMobileMenu((prev) => !prev)
     setPage({main: true})
@@ -38,12 +41,18 @@ const App = () => {
   const orangeColor = () => {
     body.style.backgroundColor = '#fc6701'
     h2.style.color = "black"
+    MobMenuCont.style.backgroundColor = '#fc6701'
   }
   const blackColor = () => {
     body.style.backgroundColor = '#4A4A4A'
+    MobMenuCont.style.backgroundColor = '#4A4A4A'
+    h2.style.color = "#fc6701"
+    mobileMenuOpen.style.backgroundColor = '#4A4A4A'
   }
   const whiteColor = () => {
     body.style.backgroundColor = 'white'
+    h2.style.color = "#fc6701"
+    MobMenuCont.style.backgroundColor = 'white'
   }
   return (
     <>

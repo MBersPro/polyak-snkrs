@@ -26,3 +26,37 @@
     font-family: var(--font);
   }
 }
+@media screen and (min-width: 1201px) {
+  .container_AboutMe{
+    display: flex;
+    align-items: flex-start;
+  }
+  .screen_aboutMe{
+    background: rgba(196, 196, 196, 0.5);
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  .h2_AboutMe{
+    position: absolute;
+    bottom: -27px;
+    right: 0px;
+  }
+  .txt_AboutMe{
+    display: none;
+  }
+  .big_aboutMe{
+    display: inline-block;
+    position: relative;
+    font-style: normal;
+    font-weight: var(--l-fw);
+    font-family: var(--font);
+    font-size: 96px;
+    line-height: 89px;
+    color: rgba(252, 103, 1, 0.04);
+  }
+  .aboutMe_square{
+    height: 100%;
+    width: 400px;
+    background-color: red;
+  }
+}

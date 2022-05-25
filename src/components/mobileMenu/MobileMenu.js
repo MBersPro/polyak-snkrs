@@ -12,6 +12,7 @@ const MobileMenu = ({ mobileMenu, closeMobileMenu, changePage, page, korzina, or
   };
 
   return (
+  <div className="main_mobileMenu_cont">
     <div className={mobileMenu ? "mobileMenuOpen" : "mobileMenuClose"}>
       <div id="MobMenuCont" className="container_mobile_menu container">
         {page.main && (
@@ -82,6 +83,7 @@ const MobileMenu = ({ mobileMenu, closeMobileMenu, changePage, page, korzina, or
         {page.korzina && <Korzina korzina={korzina}/>}
       </div>
     </div>
+  </div>
   );
 };
 

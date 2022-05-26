@@ -16,50 +16,49 @@ let interval = null;
 
 const ProductsList = ({ changePage, setProduct }) => {
   const [products, setProducts] = useState([]);
-  const [currentSlide, setCurrentSlide] = useState(1);
+  const [currentSlide, setCurrentSlide] = useState(0);
 
   useEffect(() => {
     getProducts().then((response) => setProducts([...response]));
-    return () => {clearInterval(interval)}
+    return () => {
+      clearInterval(interval);
+    };
   }, []);
+
   const openProduct = (product) => {
     setProduct(product);
     changePage("product");
-    //document.querySelector("body").style.overflow = "hidden";
+    document.querySelector("body").style.overflow = "hidden";
   };
 
-  const chunkedProducts = useMemo(() => chunk(products, 4), [products]) 
+  const chunkedProducts = useMemo(() => chunk(products, 4), [products]);
 
-
-
-   useEffect(() => {
-     if (!chunkedProducts.length) return;
-     if (interval) return;
-     interval = setInterval(() => {
-       setCurrentSlide((prev) => {
-         console.log(chunkedProducts);
-         if (chunkedProducts.length - 1 <= prev) {
-           return 0;
-         }
-         return prev + 1;
-       });
-     }, 3000);
-   }, [chunkedProducts]);
+  useEffect(() => {
+    if (!chunkedProducts.length) return;
+    if (interval) return;
+    interval = setInterval(() => {
+      setCurrentSlide((prev) => {
+        console.log(chunkedProducts);
+        if (chunkedProducts.length - 1 <= prev) {
+          return 0;
+        }
+        return prev + 1;
+      });
+    }, 5000);
+  }, [chunkedProducts]);
 
   console.log(currentSlide);
 
   return (
     <div className="carousel">
-       <div
-         style={{
-           transform: `translateX(-${currentSlide * 100}%)`,
-         }}
-         className="carousel-inner"
+      <div
+        style={{
+          transform: `translateX(-${currentSlide * 100}%)`,
+        }}
+        className="carousel-inner"
       >
         {chunkedProducts.map((products) => (
-          <div
-            className="carousel-item"
-          >
+          <div className="carousel-item">
             {products.map((product) => (
               <Product openProduct={openProduct} product={product} />
             ))}
@@ -68,7 +67,11 @@ const ProductsList = ({ changePage, setProduct }) => {
       </div>
       <div className="bullets-container">
         {chunkedProducts.map((product, index) => (
-          <div className="bullets"></div>
+          <div
+            className={`bullets ${
+              index === currentSlide ? "activeBullet" : ""
+            }`}
+          ></div>
         ))}
       </div>
     </div>

@@ -11,6 +11,9 @@
     font-weight: var(--r-fw);
     font-family: var(--font);
   }
+  .aboutMe_bigH2{
+    display: none;
+  }
 }
 @media (max-width: 1200px) and (min-width: 768px) {
   .container_AboutMe{
@@ -25,18 +28,25 @@
     font-weight: var(--l-fw);
     font-family: var(--font);
   }
+  .aboutMe_bigH2{
+    display: none;
+  }
 }
 @media screen and (min-width: 1201px) {
   .container_AboutMe{
     display: flex;
     align-items: flex-start;
+    padding-top: 215px;
+    padding-bottom: 329px;
+    
   }
-  .screen_aboutMe{
+  .aboutMe_screen{
     background: rgba(196, 196, 196, 0.5);
-    padding-top: 50px;
-    padding-bottom: 50px;
+    height: 633px;
+    box-sizing: border-box;
+    position: relative;
   }
-  .h2_AboutMe{
+  .aboutMe_h2{
     position: absolute;
     bottom: -27px;
     right: 0px;
@@ -44,19 +54,22 @@
   .txt_AboutMe{
     display: none;
   }
-  .big_aboutMe{
+  .aboutMe_bigH2_container{
     display: inline-block;
     position: relative;
     font-style: normal;
-    font-weight: var(--l-fw);
+    font-weight: var(--r-fw);
     font-family: var(--font);
     font-size: 96px;
     line-height: 89px;
     color: rgba(252, 103, 1, 0.04);
   }
   .aboutMe_square{
+    position: absolute;
     height: 100%;
-    width: 400px;
-    background-color: red;
+    width: 655px;
+    background: rgba(255, 255, 255, 0.67);
+    right: 173px;
+    
   }
 }

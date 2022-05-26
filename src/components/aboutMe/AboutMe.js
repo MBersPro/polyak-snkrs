@@ -3,14 +3,15 @@ import './AboutMe.css'
 const AboutMe = () => {
 
     return (
-    <div className='screen_aboutMe'>
-        <div className='container_AboutMe container' id="aboutMe">
-        <div className='big_aboutMe'>
-            ОБО МНЕ
-            <h2 className='h2_AboutMe'>ОБО МНЕ</h2>
-        </div>
+    <div className="aboutMe_screen">
         <div className='aboutMe_square'>
         </div>
+        <div className='container_AboutMe container' id="aboutMe">
+        <div className='aboutMe_bigH2_container'>
+            <span className='aboutMe_bigH2'>ОБО МНЕ</span>
+            <h2 className='aboutMe_h2'>ОБО МНЕ</h2>
+        </div> 
+        
             <p className='txt_AboutMe'>
                 Lorem Ipsum является текст-заполнитель обычно 
                 используется в графических, печать и издательской индустрии 

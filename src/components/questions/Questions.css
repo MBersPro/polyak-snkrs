@@ -94,6 +94,9 @@
         border: none;
         color: black;
     }
+    .questions_bigH2{
+        display: none;
+    }
 }
 @media (max-width: 1200px) and (min-width: 768px) {
     .container_question{
@@ -103,7 +106,7 @@
     .ul_question{
         margin-bottom: 157px;
     }
-    .h2_question{
+    .questions_h2{
         margin-bottom: 82px;
     }
     .li_question{
@@ -183,5 +186,79 @@
         border-radius: 2px;
         border: none;
         color: black;
+    }
+    .questions_bigH2{
+        display: none;
+    }
+}
+@media screen and (min-width: 1201px) {
+    .container_question{
+        padding-top: 41px;
+        padding-bottom: 125px;
+    }
+    .questions_bigH2_container{
+        position: relative;
+        font-style: normal;
+        font-weight: var(--r-fw);
+        font-family: var(--font);
+        font-size: 96px;
+        line-height: 89px;
+        color: rgba(252, 103, 1, 0.04);
+        margin-bottom: 46px;
+    }
+    .questions_h2{
+        position: absolute;
+        bottom: -27px;
+        left: 95px;
+    }
+    .li_question{
+        -webkit-tap-highlight-color: rgba(8, 210, 255, 0);
+        -webkit-tap-highlight-color: transparent;
+    }
+    .li_question:not(:last-child){
+        margin-bottom: 105px;
+    }
+    .summary_question:before {
+        content: '➕';
+        margin-right: 47px;
+      }
+    .detail_question[open] .summary_question:before {
+        content: '➖';
+        margin-right: 47px;
+    }
+    .summary_question{
+        align-items: center;
+        font-family: var(--font);
+        font-size: 48px;
+        line-height: 71px;
+        font-weight: var(--l-fw);
+        -moz-user-select: none;
+        -khtml-user-select: none;
+        user-select: none;
+        transition: 0.5s;
+        outline: none;
+        list-style: none;
+    }
+    .summary_question:focus, .summary_question:active{
+        outline: none;
+    }
+    .summary_question:hover{
+        color: var(--b-orange);
+        cursor: pointer;
+        transition: 0.5s;
+    }
+    .summary_question::-webkit-details-marker {
+        display:none;
+    }
+    .summary_question{
+        transition: 0.5s ease;
+    }
+    .detail_question {
+        transition: height 0.5s ease;
+      }
+    .detail_question:not([open]) { height: 1.25em; }
+    .detail_question[open] { height: 3.75em; }
+    .form_ask_a_question{
+        display: none;
     }
 }

@@ -50,7 +50,7 @@ p {
 }
 @media screen and (min-width: 1201px) {
   h2 {
-    font-size: var(--h2-tablet-size);
+    font-size: var(--h2-desktop-size);
     font-weight: var(--r-fw);
     font-family: var(--font);
     color: var(--b-orange);
@@ -113,4 +113,5 @@ img {
   --r-fw: 400;
   --h2-mobile-size: 24px;
   --h2-tablet-size: 36px;
+  --h2-desktop-size: 32px;
 }

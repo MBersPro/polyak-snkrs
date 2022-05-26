@@ -2,6 +2,7 @@ import React from "react";
 import "./CatalogHead.css";
 const CatalogHead = () => {
   return (
+    
     <div className="catalog_head">
       <h2>КАТАЛОГ</h2>
       <ul className="catalog_filter_container">

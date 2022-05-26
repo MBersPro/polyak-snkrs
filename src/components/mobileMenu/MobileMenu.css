@@ -158,4 +158,9 @@
     cursor: pointer;
   }
 }
+@media screen and (min-width: 1201px) {
+  .main_mobileMenu_cont{
+    display: none;
+  }
+}
 

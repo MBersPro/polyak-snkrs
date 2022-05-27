@@ -38,7 +38,6 @@ const ProductsList = ({ changePage, setProduct }) => {
     if (interval) return;
     interval = setInterval(() => {
       setCurrentSlide((prev) => {
-        console.log(chunkedProducts);
         if (chunkedProducts.length - 1 <= prev) {
           return 0;
         }
@@ -46,8 +45,6 @@ const ProductsList = ({ changePage, setProduct }) => {
       });
     }, 5000);
   }, [chunkedProducts]);
-
-  console.log(currentSlide);
 
   return (
     <div className="carousel">

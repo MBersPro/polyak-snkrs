@@ -4,9 +4,9 @@ const AboutMe = () => {
 
     return (
     <div className="aboutMe_screen">
-        <div className='aboutMe_square'>
-        </div>
+        
         <div className='container_AboutMe container' id="aboutMe">
+        
         <div className='aboutMe_bigH2_container'>
             <span className='aboutMe_bigH2'>ОБО МНЕ</span>
             <h2 className='aboutMe_h2'>ОБО МНЕ</h2>
@@ -23,6 +23,8 @@ const AboutMe = () => {
                 используется в графических, печать и издательской индустрии 
                 для предварительного просмотра макета и визуальных макетах.
             </p>
+        </div>
+        <div className='aboutMe_square'>
         </div>
     </div>
     );

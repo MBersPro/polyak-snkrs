@@ -10,18 +10,18 @@ const CatalogHead = () => {
         </div> 
       <ul className="catalog_filter_container">
         <li className="catalog_filter_li">
-          <select>
-            <option>Yeezy</option>
-            <option>350</option>
-            <option>450</option>
-            <option>500</option>
-            <option>700</option>
-            <option>Slide</option>
-            <option>Foam Runner</option>
+          <select className="CatalogHead_select" >
+            <option className="CatalogHead_option">Yeezy</option>
+            <option className="CatalogHead_option">350</option>
+            <option className="CatalogHead_option">450</option>
+            <option className="CatalogHead_option">500</option>
+            <option className="CatalogHead_option">700</option>
+            <option className="CatalogHead_option">Slide</option>
+            <option className="CatalogHead_option">Foam Runner</option>
           </select>
         </li>
         <li className="catalog_filter_li">
-          <select>
+          <select className="CatalogHead_select">
             <option>Jordan</option>
             <option>1 Low</option>
             <option>1 Mid</option>
@@ -30,14 +30,14 @@ const CatalogHead = () => {
           </select>
         </li>
         <li className="catalog_filter_li">
-          <select className="catalogFilter_select">
+          <select className="CatalogHead_select">
             <option>Nike</option>
             <option>Dunk Low</option>
             <option>Dunk High</option>
           </select>
         </li>
         <li className="catalog_filter_li">
-          <select>
+          <select className="CatalogHead_select">
             <option>Kids</option>
           </select>
         </li>

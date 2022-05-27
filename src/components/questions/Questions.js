@@ -3,7 +3,10 @@ import "./Questions.css";
 const Questions = () => {
     return (
         <div className='container container_question' id="questions">
-            <h2 className='h2_question'>ЧАСТО ЗАДАВАЕМЫЕ ВОПРОСЫ</h2>
+            <div className='questions_bigH2_container'>
+                <span className="questions_bigH2">ВОПРОСЫ</span>
+                <h2 className='questions_h2'>ЧАСТО ЗАДАВАЕМЫЕ ВОПРОСЫ</h2>
+            </div> 
             <ul className='ul_question'>
                 <li className='li_question'>
                     <details className='detail_question'>

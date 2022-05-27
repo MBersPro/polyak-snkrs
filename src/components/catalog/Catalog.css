@@ -3,52 +3,16 @@
         padding-top: 11px;
         padding-bottom: 25px;
     }
-    .catalog_filter_container {
-        display: flex;
-        align-items: center;
-    }
-
-    .catalog_filter_li {
-        font-family: var(--font);
-        font-weight: var(--l-fw);
-    }
-    .catalog_filter_li:not(:last-child){
-        margin-right: 42px;
-    }
 }
 @media (max-width: 1200px) and (min-width: 768px) {
     .catalog_container {
         padding-top: 26px;
         padding-bottom: 50px;
     }
-    .catalog_filter_container {
-        display: flex;
-        align-items: center;
-    }
-
-    .catalog_filter_li {
-        font-family: var(--font);
-        font-weight: var(--l-fw);
-    }
-    .catalog_filter_li:not(:last-child){
-        margin-right: 36px;
-    }
 }
 @media screen and (min-width: 1201px) {
     .catalog_container {
         padding-top: 26px;
         padding-bottom: 50px;
-    }
-    .catalog_filter_container {
-        display: flex;
-        align-items: center;
-    }
-
-    .catalog_filter_li {
-        font-family: var(--font);
-        font-weight: var(--l-fw);
-    }
-    .catalog_filter_li:not(:last-child){
-        margin-right: 36px;
     }
 }

@@ -4,7 +4,10 @@ const CatalogHead = () => {
   return (
     
     <div className="catalog_head">
-      <h2>КАТАЛОГ</h2>
+      <div className='catalogHead_bigH2_container'>
+            <span className="catalog_bigH2">КАТАЛОГ</span>
+            <h2 className='catalogHead_h2'>КАТАЛОГ</h2>
+        </div> 
       <ul className="catalog_filter_container">
         <li className="catalog_filter_li">
           <select>

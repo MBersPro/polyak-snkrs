@@ -5,8 +5,8 @@ import "./Reviews.css"
 const Reviews = () => {
     return (
         <div className='container_reviews container' id="review">
-            <div className='reviews_bigH2_container'>
-                <span className="reviews_bigH2">ОТЗЫВЫ</span>
+            <div className='reviews_container_h2'>
+                <span className="reviews_back">ОТЗЫВЫ</span>
                 <h2 className='reviews_h2'>ОТЗЫВЫ</h2>
             </div> 
             <div className='div_rest_reviews'>  

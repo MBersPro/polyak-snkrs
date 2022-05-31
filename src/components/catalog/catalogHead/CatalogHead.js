@@ -3,29 +3,80 @@ import "./CatalogHead.css";
 const CatalogHead = () => {
   return (
     
-    <div className="catalog_head">
-        <div className='catalogHead_bigH2_container'>
-            <span className="catalog_bigH2">КАТАЛОГ</span>
-            <h2 className='catalogHead_h2'>КАТАЛОГ</h2>
+    <div className="catalogHead_container">
+        <div className='catalogHead_titleContainer'>
+            <span className="catalogHead_titleBack">КАТАЛОГ</span>
+            <h2 className='catalogHead_title'>КАТАЛОГ</h2>
         </div> 
-        <nav class="menu">
-          <ul className="menu__list">
-              <li className="liii">
-                <p className="menu__link">Yeezy</p>
-                
-                <ul className="sub-menu__list">
-                <div className="cont_sub-menu__list">
-                    <li>
-                      <a href="" className="sub-menu__link">750</a>
-                    </li>
-                    <li>
-                      <a href="" className="sub-menu__link">300</a>
-                    </li>
-                    <li>
-                      <a href="" className="sub-menu__link">250</a>
-                    </li>
-                    </div>
-                </ul>
+        <nav class="catalogHead_menu">
+          <ul className="catalogHead_menu_list">
+              <li className="catalogHead_menu_element_list">
+                <p className="catalogHead_menu_brand">Yeezy</p>
+                <div className="catalogHead_dropdown_list">
+                  <ul className="catalogHead_dropdown_list_background">        
+                      <li>
+                        <a href="" className="catalogHead_sub_menu_link">750</a>
+                      </li>
+                      <li>
+                        <a href="" className="catalogHead_sub_menu_link">300</a>
+                      </li>
+                      <li>
+                        <a href="" className="catalogHead_sub_menu_link">250</a>
+                      </li>
+                  </ul>
+                </div>
+              </li>
+              <li className="catalogHead_menu_element_list">
+                <p className="catalogHead_menu_brand">Jordan</p>
+                <div className="catalogHead_dropdown_list">
+                  <ul className="catalogHead_dropdown_list_background">        
+                      <li>
+                        <a href="" className="catalogHead_sub_menu_link">Jordan 1 Low</a>
+                      </li>
+                      <li>
+                        <a href="" className="catalogHead_sub_menu_link">Mid
+</a>
+                      </li>
+                      <li>
+                        <a href="" className="catalogHead_sub_menu_link">High</a>
+                      </li>
+                      <li>
+                        <a href="" className="catalogHead_sub_menu_link">Jordan 4</a>
+                      </li>
+                  </ul>
+                </div>
+              </li>
+              <li className="catalogHead_menu_element_list">
+                <p className="catalogHead_menu_brand">Nike</p>
+                <div className="catalogHead_dropdown_list">
+                  <ul className="catalogHead_dropdown_list_background">        
+                      <li>
+                        <a href="" className="catalogHead_sub_menu_link">750</a>
+                      </li>
+                      <li>
+                        <a href="" className="catalogHead_sub_menu_link">300</a>
+                      </li>
+                      <li>
+                        <a href="" className="catalogHead_sub_menu_link">250</a>
+                      </li>
+                  </ul>
+                </div>
+              </li>
+              <li className="catalogHead_menu_element_list">
+                <p className="catalogHead_menu_brand">Kids</p>
+                <div className="catalogHead_dropdown_list">
+                  <ul className="catalogHead_dropdown_list_background">        
+                      <li>
+                        <a href="" className="catalogHead_sub_menu_link">750</a>
+                      </li>
+                      <li>
+                        <a href="" className="catalogHead_sub_menu_link">300</a>
+                      </li>
+                      <li>
+                        <a href="" className="catalogHead_sub_menu_link">250</a>
+                      </li>
+                  </ul>
+                </div>
               </li>
           </ul>
 			  </nav>

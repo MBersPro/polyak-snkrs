@@ -10,7 +10,7 @@ const CatalogHead = () => {
         </div> 
         <nav class="menu">
           <ul className="menu__list">
-              <li className="liii">
+              <li>
                 <p className="menu__link">Yeezy</p>
                 
                 <ul className="sub-menu__list">

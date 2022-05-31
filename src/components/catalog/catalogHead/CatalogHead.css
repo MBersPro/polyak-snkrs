@@ -2,7 +2,7 @@
     .catalog_head{
         margin-bottom: 15px;
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
     }
     .catalog_filter_container {
         display: flex;
@@ -19,21 +19,44 @@
     .catalog_bigH2{
         display: none;
     }
-    .CatalogHead_select{
-        border: none;
-        outline: none;
-        width: 60px;
+    .menu{}
+    .menu li{
+        position: relative;
+    }
+    .menu__list>li:hover .sub-menu__list{
+        display: block;
+    }
+
+    .menu__link{
         font-family: var(--font);
         font-style: normal;
-        font-weight: var(--r-fw);
+        font-weight: var(--l-fw);
         font-size: 14px;
-        line-height: 23px;
+        line-height: 71px;
+        color: black;
+    }
+    .sub-menu__list{
+        display: none;
+        position: absolute;
+        left: -40px;
+        top: 50px;
+        padding: 20px 20px;
+        z-index: 11;
+    }
+    .cont_sub-menu__list{
+        background-color: rgb(255, 255, 255);
+        box-shadow: 3px 3px 13px rgba(252, 103, 1, 0.15);
+        padding: 15px 30px;
+    }
+    .sub-menu__link{
+        font-family: var(--font);
+        font-style: normal;
+        font-weight: var(--l-fw);
+        font-size: 14px;
+        line-height: 71px;
+        color: black;
+    }
 
-    }
-    .CatalogHead_option{
-        border: none;
-        outline: none;
-    }
 }
 @media (max-width: 1200px) and (min-width: 768px) {
     .catalog_filter_li{
@@ -47,7 +70,7 @@
     .catalog_head{
         margin-bottom: 25px;
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
     }
     .catalog_filter_container {
         display: flex;
@@ -64,20 +87,42 @@
     .catalog_bigH2{
         display: none;
     }
-    .CatalogHead_select{
-        border: none;
-        outline: none;
-        width: 60px;
+    .menu{}
+    .menu li{
+        position: relative;
+    }
+    .menu__list>li:hover .sub-menu__list{
+        display: block;
+    }
+
+    .menu__link{
         font-family: var(--font);
         font-style: normal;
-        font-weight: var(--r-fw);
-        font-size: 14px;
-        line-height: 23px;
-
+        font-weight: var(--l-fw);
+        font-size: 48px;
+        line-height: 71px;
+        color: black;
     }
-    .CatalogHead_option{
-        border: none;
-        outline: none;
+    .sub-menu__list{
+        display: none;
+        position: absolute;
+        left: -40px;
+        top: 50px;
+        padding: 20px 20px;
+        z-index: 11;
+    }
+    .cont_sub-menu__list{
+        background-color: rgb(255, 255, 255);
+        box-shadow: 3px 3px 13px rgba(252, 103, 1, 0.15);
+        padding: 15px 30px;
+    }
+    .sub-menu__link{
+        font-family: var(--font);
+        font-style: normal;
+        font-weight: var(--l-fw);
+        font-size: 36px;
+        line-height: 71px;
+        color: black;
     }
 }
 @media screen and (min-width: 1201px) {
@@ -92,6 +137,7 @@
     .catalog_head{
         margin-bottom: 68px;
         display: flex;
+        justify-content: space-around;
     }
     .catalog_filter_container {
         display: flex;
@@ -120,19 +166,42 @@
         bottom: -27px;
         right: 0px;
     }
-    .CatalogHead_select{
-        border: none;
-        outline: none;
-        width: 60px;
+    .menu{}
+    .menu li{
+        position: relative;
+    }
+    .menu__list>li:hover .sub-menu__list{
+        display: block;
+    }
+
+    .menu__link{
         font-family: var(--font);
         font-style: normal;
-        font-weight: var(--r-fw);
-        font-size: 14px;
-        line-height: 23px;
+        font-weight: var(--l-fw);   
+        font-size: 48px;    
+        line-height: 71px;  
+        color: black;
+    }
+    .sub-menu__list{
+        display: none;
+        position: absolute;
+        left: -40px;
+        top: 60px;
+        padding: 20px 20px;
+        z-index: 11;
+    }
+    .cont_sub-menu__list{
+        background-color: rgb(255, 255, 255);
+        box-shadow: 3px 3px 13px rgba(252, 103, 1, 0.15);
+        padding: 15px 30px;
+    }
+    .sub-menu__link{
+        font-family: var(--font);
+        font-style: normal;
+        font-weight: var(--l-fw);
+        font-size: 48px;
+        line-height: 71px;
+        color: black;
+    }
 
-    }
-    .CatalogHead_option{
-        border: none;
-        outline: none;
-    }
 }

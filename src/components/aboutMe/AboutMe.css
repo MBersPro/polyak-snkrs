@@ -11,7 +11,7 @@
     font-weight: var(--r-fw);
     font-family: var(--font);
   }
-  .aboutMe_bigH2{
+  .aboutMe_back{
     display: none;
   }
 }
@@ -28,7 +28,7 @@
     font-weight: var(--l-fw);
     font-family: var(--font);
   }
-  .aboutMe_bigH2{
+  .aboutMe_back{
     display: none;
   }
 }
@@ -43,20 +43,23 @@
   }
   .aboutMe_h2{
     position: absolute;
-    bottom: -27px;
+    bottom: -5px;
     right: 0px;
   }
   .txt_AboutMe{
     display: none;
   }
-  .aboutMe_bigH2_container{
+  .aboutMe_container_h2{
     display: inline-block;
     position: relative;
+    
+  }
+  .aboutMe_back{
     font-style: normal;
     font-weight: var(--r-fw);
     font-family: var(--font);
     font-size: 96px;
     line-height: 89px;
-    color: rgba(252, 103, 1, 0.04);
+    color: rgba(252, 103, 1, 0.04); 
   }
 }

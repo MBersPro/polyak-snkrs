@@ -7,8 +7,8 @@ const AboutMe = () => {
         
         <div className='container_AboutMe container' id="aboutMe">
         
-        <div className='aboutMe_bigH2_container'>
-            <span className='aboutMe_bigH2'>ОБО МНЕ</span>
+        <div className='aboutMe_container_h2'>
+            <span className='aboutMe_back'>ОБО МНЕ</span>
             <h2 className='aboutMe_h2'>ОБО МНЕ</h2>
         </div> 
         

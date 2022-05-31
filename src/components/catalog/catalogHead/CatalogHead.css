@@ -2,7 +2,7 @@
     .catalogHead_container{
         margin-bottom: 15px;
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
         align-items: center;
     }
     .catalogHead_menu li{
@@ -73,7 +73,7 @@
     .catalogHead_container{
         margin-bottom: 25px;
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
         align-items: center;
     }
 
@@ -89,6 +89,9 @@
     }
     .catalogHead_menu_element_list{
         display: inline-block;
+    }
+    .catalogHead_menu_element_list:not(:last-child){
+        margin-right: 36px;
     }
     .catalogHead_titleBack{
         display: none;
@@ -108,7 +111,7 @@
         -ms-transform: scale(0);
         transform: scale(0);
         position: absolute;
-        left: -50px;
+        left: -77px;
         top: 60px;
         padding: 20px 20px;
         z-index: 11;
@@ -116,14 +119,17 @@
     .catalogHead_dropdown_list_background{
         background-color: rgb(255, 255, 255);
         box-shadow: 3px 3px 13px rgba(252, 103, 1, 0.15);
-        padding: 15px 30px;
+        padding: 15px;
+        width: 190px;
+        box-sizing: border-box;
+        text-align: center;
     }
     .catalogHead_sub_menu_link{
         font-family: var(--font);
         font-style: normal;
         font-weight: var(--l-fw);
-        font-size: 48px;
-        line-height: 71px;
+        font-size: 36px;
+        line-height: 80px;
         color: black;
     }
 }
@@ -180,6 +186,9 @@
     .catalogHead_menu_element_list{
         display: inline-block;
     }
+    .catalogHead_menu_element_list:not(:last-child){
+        margin-right: 40px;
+    }
 
     .catalogHead_menu_brand{
         font-family: var(--font);
@@ -197,7 +206,7 @@
         -ms-transform: scale(0);
         transform: scale(0);
         position: absolute;
-        left: -40px;
+        left: -83px;
         top: 60px;
         padding: 20px 20px;
         z-index: 11;
@@ -215,8 +224,9 @@
         font-style: normal;
         font-weight: var(--l-fw);
         font-size: 48px;
-        line-height: 71px;
+        line-height: 100px;
         color: black;
     }
+
 
 }

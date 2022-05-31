@@ -18,6 +18,7 @@
         margin-bottom: 58px;
     }
     .summary_question{
+        display: flex;
         align-items: center;
         font-family: var(--font);
         font-size: 20px;
@@ -33,27 +34,21 @@
         transition: 0.5s;
     }
     .summary_question:before {
-        content: '➕';
-        margin-right: 20px;
+        content: '+';
+        margin-right: 47px;
         font-weight: var(--r-fw);
-    }
+        font-size: 50px;
+      }
     .detail_question[open] .summary_question:before {
-        content: '➖';
-        margin-right: 20px;
-
+        content: '×';
+        margin-right: 47px;
+        font-weight: var(--r-fw);
+        color: var(--b-orange);
+        font-size: 50px;
     }
     .summary_question::-webkit-details-marker {
         display:none;
     }
-    .summary_question{
-        transition: 0.5s ease;
-        list-style: none;
-    }
-    .detail_question {
-        transition: height 0.5s ease;
-    }
-    .detail_question:not([open]) { height: 1.25em; }
-    .detail_question[open] { height: 3.75em; }
 
     .form_ask_a_question{
         display: flex;
@@ -117,14 +112,20 @@
         margin-bottom: 105px;
     }
     .summary_question:before {
-        content: '➕';
-        margin-right: 42px;
+        content: '+';
+        margin-right: 47px;
+        font-weight: var(--r-fw);
+        font-size: 80px;
       }
     .detail_question[open] .summary_question:before {
-        content: '➖';
-        margin-right: 42px;
+        content: '×';
+        margin-right: 47px;
+        font-weight: var(--r-fw);
+        color: var(--b-orange);
+        font-size: 80px;
     }
     .summary_question{
+        display: flex;
         align-items: center;
         font-family: var(--font);
         font-size: 36px;
@@ -147,14 +148,6 @@
     .summary_question::-webkit-details-marker {
         display:none;
     }
-    .summary_question{
-        transition: 0.5s ease;
-    }
-    .detail_question {
-        transition: height 0.5s ease;
-      }
-    .detail_question:not([open]) { height: 1.25em; }
-    .detail_question[open] { height: 3.75em; }
     .form_ask_a_question{
         display: flex;
         flex-direction: column;
@@ -193,8 +186,7 @@
 }
 @media screen and (min-width: 1201px) {
     .container_question{
-        padding-top: 41px;
-        padding-bottom: 125px;
+        padding: 15px;
     }
     .questions_bigH2_container{
         position: relative;
@@ -206,31 +198,32 @@
         color: rgba(252, 103, 1, 0.04);
         margin-bottom: 46px;
     }
+    .detail_question{
+        webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    }
     .questions_h2{
         position: absolute;
         bottom: -27px;
         left: 95px;
     }
-    .li_question{
-        -webkit-tap-highlight-color: rgba(8, 210, 255, 0);
-        -webkit-tap-highlight-color: transparent;
-    }
-    .li_question:not(:last-child){
-        margin-bottom: 105px;
-    }
     .summary_question:before {
-        content: '➕';
+        content: '+';
         margin-right: 47px;
+        font-weight: var(--r-fw);
+        font-size: 100px;
       }
     .detail_question[open] .summary_question:before {
-        content: '➖';
+        content: '×';
         margin-right: 47px;
+        font-weight: var(--r-fw);
+        color: var(--b-orange);
+        font-size: 100px;
     }
     .summary_question{
+        display: flex;
         align-items: center;
         font-family: var(--font);
-        font-size: 48px;
-        line-height: 71px;
+        font-size: 36px;
         font-weight: var(--l-fw);
         -moz-user-select: none;
         -khtml-user-select: none;
@@ -238,6 +231,7 @@
         transition: 0.5s;
         outline: none;
         list-style: none;
+        
     }
     .summary_question:focus, .summary_question:active{
         outline: none;
@@ -250,15 +244,14 @@
     .summary_question::-webkit-details-marker {
         display:none;
     }
+   
     .summary_question{
         transition: 0.5s ease;
     }
     .detail_question {
         transition: height 0.5s ease;
-      }
-    .detail_question:not([open]) { height: 1.25em; }
-    .detail_question[open] { height: 3.75em; }
+    }
     .form_ask_a_question{
         display: none;
-    }
+    } 
 }

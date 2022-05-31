@@ -7,70 +7,69 @@ const Questions = () => {
                 <span className="questions_bigH2">ВОПРОСЫ</span>
                 <h2 className='questions_h2'>ЧАСТО ЗАДАВАЕМЫЕ ВОПРОСЫ</h2>
             </div> 
-            <ul className='ul_question'>
-                <li className='li_question'>
+                
                     <details className='detail_question'>
                         <summary className='summary_question'>
-                            Как происходит оплата ?
+                            <span className='summary_txt'>Как происходит оплата ?</span>
                         </summary>
                         Текст
                     </details>
-                </li>
+                
 
-                <li className='li_question'>
+                
                     <details className='detail_question'>
                         <summary className='summary_question'> 
-                            Как происходит доставка ?
+                            <span className='summary_txt'>Как происходит доставка ?</span>
                         </summary>
                         Текст
                     </details>
-                </li>
+                
 
-                <li className='li_question'>
+                
                     <details className='detail_question'>
                         <summary className='summary_question'> 
-                            Как оформить заказ ?
+                            <span className='summary_txt'>Как оформить заказ ?</span>
                         </summary>
                         Текст
                     </details>
-                </li>
+                
 
-                <li className='li_question'>
+                
                     <details className='detail_question'>
                         <summary className='summary_question'> 
-                            Вся продукция оригинальная ?
+                            <span className='summary_txt'>Вся продукция оригинальная ?</span>
                         </summary>
                         Текст
                     </details>
-                </li>
+                
 
-                <li className='li_question'>
+                
                     <details className='detail_question'>
                         <summary className='summary_question'> 
-                            Почему цена зависит от размера ?
+                            <span className='summary_txt'>Почему цена зависит от размера ?</span>
                         </summary>
                         Текст
                     </details>
-                </li>
+                
 
-                <li className='li_question'>
+                
                     <details className='detail_question'>
                         <summary className='summary_question'> 
-                            Как формируются цены на сайте ?
+                            <span className='summary_txt'>Как формируются цены на сайте ?</span>
                         </summary>
                         Текст
                     </details>
-                </li>
+                
 
-                <li className='li_question'>
+                
                     <details className='detail_question'>
                         <summary className='summary_question'> 
-                            Что делать, если размер мне не подошел ?
+                            <span className='summary_txt'>Что делать, если размер мне не подошел ?</span>
                         </summary>
                         Текст
                     </details>
-                </li>
-            </ul>
+                
+    
             <form className='form_ask_a_question'>
                 <h3 className='h3_ask_a_question'>Задать вопрос</h3>
                 <input type="text" className='input_ask_a_question' placeholder="Написать вопрос..."/>    

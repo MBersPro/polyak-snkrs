@@ -5,7 +5,7 @@
         padding-top: 25px;
         padding-bottom: 50px;
     }
-    .h2_reviews{
+    .reviews_h2{
         margin-bottom: 58px;
     }
     .iphone_img_reviews{
@@ -67,6 +67,9 @@
         border: none;
         color: black;
     }
+    .iphoneDesktop_img_reviews, .reviews_bigH2{
+        display: none;
+    }
 }
 @media (max-width: 1200px) and (min-width: 768px) {
     .container_reviews{
@@ -75,7 +78,7 @@
         padding-top: 50px;
         padding-bottom: 100px;
     }
-    .h2_reviews{
+    .reviews_h2{
         margin-bottom: 82px;
     }
     .iphone_img_reviews{
@@ -128,5 +131,45 @@
         border-radius: 2px;
         border: none;
         color: black;
+    }
+    .iphoneDesktop_img_reviews, .reviews_bigH2{
+        display: none;
+    }
+}
+@media screen and (min-width: 1201px) {
+    .container_reviews{
+        display: flex;
+        flex-direction: column;
+        padding-top: 60px;
+        padding-bottom: 150px;
+    }
+    .iphone_img_reviews{
+        display: none;
+    }
+    .div_rest_reviews{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .form_reviews{
+        display: none;
+    }
+    .see_more_reviews{
+        display: none;
+    }
+    .reviews_bigH2_container{
+        display: inline-block;
+        position: relative;
+        font-style: normal;
+        font-weight: var(--r-fw);
+        font-family: var(--font);
+        font-size: 96px;
+        line-height: 89px;
+        color: rgba(252, 103, 1, 0.04);
+    }
+    .reviews_h2{
+        position: absolute;
+        bottom: -27px;
+        right: 0px;
     }
 }

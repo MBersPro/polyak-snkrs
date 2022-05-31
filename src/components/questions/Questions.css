@@ -40,7 +40,7 @@
     .detail_question[open] .summary_question:before {
         content: '➖';
         margin-right: 20px;
-        /* font-size: 24px; */
+
     }
     .summary_question::-webkit-details-marker {
         display:none;

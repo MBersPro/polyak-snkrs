@@ -34,17 +34,12 @@
 }
 @media screen and (min-width: 1201px) {
   .container_AboutMe{
-    display: flex;
-    align-items: flex-start;
-    padding-top: 215px;
-    padding-bottom: 329px;
-    
+    padding-top: 200px;
+    padding-bottom: 300px;
   }
   .aboutMe_screen{
     background: rgba(196, 196, 196, 0.5);
-    height: 633px;
     box-sizing: border-box;
-    position: relative;
   }
   .aboutMe_h2{
     position: absolute;
@@ -63,13 +58,5 @@
     font-size: 96px;
     line-height: 89px;
     color: rgba(252, 103, 1, 0.04);
-  }
-  .aboutMe_square{
-    position: absolute;
-    height: 100%;
-    width: 655px;
-    background: rgba(255, 255, 255, 0.67);
-    right: 173px;
-    
   }
 }

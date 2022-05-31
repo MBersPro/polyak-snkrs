@@ -10,13 +10,15 @@ const Korzina = ({ korzina }) => {
           <div className="korzina_container_product_img">
             <img alt="test" src={product.images[0]} className="korzina_product_img" />
           </div>
-          <div className="container_name_and_price">
+          <div className="container_name_and_size">
                       <span className="korzina_name_product">{product.brand}</span>
                       <span className="korzina_name_product">{product.model}</span>
-            <p className="korzina_price_product">Размер: </p>
+            <p className="korzina_size_product">Размер: </p>
           </div>
           <button className="korzina_delete_product_btn"><DelBtn/></button>
+          {product.price}
           </li>
+          
         ))}
       </ul>
     </div>

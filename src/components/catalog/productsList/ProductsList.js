@@ -14,7 +14,7 @@ const chunk = (input, size) => {
 
 let interval = null;
 
-const ProductsList = ({ changePage, setProduct }) => {
+const ProductsList = ({ filter, changePage, setProduct }) => {
   const [products, setProducts] = useState([]);
   const [currentSlide, setCurrentSlide] = useState(0);
 
@@ -24,6 +24,20 @@ const ProductsList = ({ changePage, setProduct }) => {
       clearInterval(interval);
     };
   }, []);
+
+  useEffect(() => {
+    if (filter === "all") {
+      getProducts().then((response) => setProducts([...response]));
+    } else {
+      getProducts().then((response) =>
+        setProducts([
+          ...response.filter(
+            (product) => product.brand === filter || product.model === filter
+          ),
+        ])
+      );
+    }
+  }, [filter]);
 
   const openProduct = (product) => {
     setProduct(product);
@@ -36,15 +50,23 @@ const ProductsList = ({ changePage, setProduct }) => {
   useEffect(() => {
     if (!chunkedProducts.length) return;
     if (interval) return;
-    interval = setInterval(() => {
-      setCurrentSlide((prev) => {
-        if (chunkedProducts.length - 1 <= prev) {
-          return 0;
-        }
-        return prev + 1;
-      });
-    }, 5000);
+    if (filter === "all") {
+      interval = setInterval(() => {
+        setCurrentSlide((prev) => {
+          if (chunkedProducts.length - 1 <= prev) {
+            return 0;
+          }
+          return prev + 1;
+        });
+      }, 5000);
+    }
   }, [chunkedProducts]);
+
+  const changeIndex = (as) => {
+    // const indexx = 1
+    setCurrentSlide(as);
+    console.log(currentSlide);
+  };
 
   return (
     <div className="carousel">
@@ -63,13 +85,57 @@ const ProductsList = ({ changePage, setProduct }) => {
         ))}
       </div>
       <div className="bullets-container">
-        {chunkedProducts.map((product, index) => (
-          <div
-            className={`bullets ${
-              index === currentSlide ? "activeBullet" : ""
-            }`}
-          ></div>
-        ))}
+        {chunkedProducts.map((product, index) => 
+        
+          
+          
+
+
+          
+          
+
+
+
+
+
+
+
+          
+
+
+
+
+          
+
+          
+          
+
+
+
+
+
+          
+
+
+          
+
+
+
+
+          
+          
+          
+          
+
+          
+            <div
+              key={index}
+              className={`bullets ${
+                index === currentSlide ? "activeBullet" : ""
+              }`}
+              onClick={() => changeIndex(index)}
+            ></div> 
+        )}
       </div>
     </div>
   );

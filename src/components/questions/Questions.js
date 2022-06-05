@@ -3,11 +3,11 @@ import "./Questions.css";
 const Questions = () => {
     return (
         <div className='container container_question' id="questions">
-            <div className='questions_container_h2'>
-                <span className="questions_back">ВОПРОСЫ</span>
-                <h2 className='questions_h2'>ЧАСТО ЗАДАВАЕМЫЕ ВОПРОСЫ</h2>
+            <div className='questions_titleContainer'>
+                <span className="questions_titleBack">ВОПРОСЫ</span>
+                <h2 className='questions_title'>ЧАСТО ЗАДАВАЕМЫЕ ВОПРОСЫ</h2>
             </div> 
-                
+            <div className='questions_detailsContainer'>
                     <details className='detail_question'>
                         <summary className='summary_question'>
                             <span className='summary_txt'>Как происходит оплата ?</span>
@@ -69,7 +69,7 @@ const Questions = () => {
                         Текст
                     </details>
                 
-    
+            </div>
             <form className='form_ask_a_question'>
                 <h3 className='h3_ask_a_question'>Задать вопрос</h3>
                 <input type="text" className='input_ask_a_question' placeholder="Написать вопрос..."/>    

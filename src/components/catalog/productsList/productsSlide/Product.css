@@ -1,13 +1,12 @@
 .productList_image_container {
   width: 160px;
   height: 160px;
-  margin-bottom: 4px;
 }
 .productList_image {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  -webkit-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+  -webkit-box-shadow: 4px 5px 10px 2px rgba(34, 60, 80, 0.2);
   -moz-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
   box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
 }
@@ -15,17 +14,19 @@
   font-family: var(--font);
   font-style: normal;
   font-weight: var(--l-fw);
-  font-size: 10px;
-  line-height: 36px;
+  font-size: 14px;
+  line-height: 21px;
   color: #000000;
   margin-bottom: 10px;
-  max-width: 177px;
+  max-width: 160px;
+  text-align: center;
 }
 .productList_price_product {
   font-family: var(--font);
   font-style: normal;
   font-weight: var(--l-fw);
-  font-size: 10px;
+  font-size: 14px;
   line-height: 21px;
   color: #000000;
+  text-align: center;
 }

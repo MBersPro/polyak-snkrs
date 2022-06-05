@@ -7,9 +7,9 @@ const AboutMe = () => {
         
         <div className='container_AboutMe container' id="aboutMe">
         
-        <div className='aboutMe_container_h2'>
-            <span className='aboutMe_back'>ОБО МНЕ</span>
-            <h2 className='aboutMe_h2'>ОБО МНЕ</h2>
+        <div className='aboutMe_titleContainer'>
+            <span className='aboutMe_titleBack'>ОБО МНЕ</span>
+            <h2 className='aboutMe_title'>ОБО МНЕ</h2>
         </div> 
         
             <p className='txt_AboutMe'>

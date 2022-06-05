@@ -5,7 +5,6 @@ import { ReactComponent as Korzina } from "./svg/korzina.svg";
 import Hamburger from "hamburger-react";
 
 const Header = ({ mobileMenu, children, changeMobileMenu}) => {
-
   return (
 
     <div
@@ -36,10 +35,11 @@ const Header = ({ mobileMenu, children, changeMobileMenu}) => {
                 <li className="header_li">
                   <a className="header_element_menu" href="#questions">ВОПРОСЫ</a>
                 </li>
-                <li className="header_li">
-                  <a className="header_element_menu"><Korzina/></a>
-                </li>
+                
           </ul>
+          <div className="header_container_korzinaLink">
+             <a className="header_korzinaLink"><Korzina/></a>
+          </div>
           
         </div>
       </div>

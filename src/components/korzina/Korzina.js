@@ -30,6 +30,15 @@ const Korzina = ({ korzina }) => {
             {product.price}
           </li>
         ))}
+        <p>
+            Оформление заказа
+        </p>
+        <form>
+          <input/>
+          <input/>
+          <input/>
+          <input/>
+        </form>
       </ul>
        <div>{`Сумма вашего заказа: ${amountOfProducts()}`}</div>
       {korzina.length === 0 && <p>В вашей корзине пока пусто</p>}

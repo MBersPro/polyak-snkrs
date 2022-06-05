@@ -60,11 +60,11 @@ const ProductsList = ({ filter, changePage, setProduct }) => {
         });
       }, 5000);
     }
-  }, [chunkedProducts]);
+  }, []);
 
-  const changeIndex = (as) => {
+  const changeIndex = (index) => {
     // const indexx = 1
-    setCurrentSlide(as);
+    setCurrentSlide(index);
     console.log(currentSlide);
   };
 
@@ -85,57 +85,13 @@ const ProductsList = ({ filter, changePage, setProduct }) => {
         ))}
       </div>
       <div className="bullets-container">
-        {chunkedProducts.map((product, index) => 
-        
-          
-          
-
-
-          
-          
-
-
-
-
-
-
-
-          
-
-
-
-
-          
-
-          
-          
-
-
-
-
-
-          
-
-
-          
-
-
-
-
-          
-          
-          
-          
-
-          
-            <div
-              key={index}
-              className={`bullets ${
-                index === currentSlide ? "activeBullet" : ""
-              }`}
-              onClick={() => changeIndex(index)}
-            ></div> 
-        )}
+        {chunkedProducts.map((product, index) => (
+          <div
+            key={index}
+            className={filter === "all" ? `${index === currentSlide ? "activeBullet" : "bullets"}` : "pagination"}
+            onClick={() => changeIndex(index)}
+          >{filter !== "all" && index + 1}</div>
+        ))}
       </div>
     </div>
   );

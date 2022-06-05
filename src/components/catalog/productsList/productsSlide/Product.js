@@ -16,8 +16,7 @@ const Product = ({ openProduct, product }) => {
           />
         </div>
         <p className="productList_name_product">
-          <span>{product.brand}</span>
-          <span>{product.model}</span>
+          <span>{product.name}</span>
         </p>
         <p className="productList_price_product">{product.price} ₽</p>
     </div>

@@ -1,5 +1,4 @@
 @media screen and (max-width: 767px) {
-
   .bullets-container {
     display: flex;
     justify-content: center;
@@ -14,16 +13,30 @@
   }
 
   .activeBullet {
-      background-color: #fc6701;
+    background-color: #fc6701;
+    width: 7px;
+    height: 7px;
+    border: solid 3px #fc6701;
+    opacity: 0.5;
+    border-radius: 50%;
   }
 
   .bullets:not(:last-child) {
     margin-right: 5px;
   }
 
+  .activeBullet:not(:last-child) {
+    margin-right: 5px;
+  }
+
+  .pagination {
+    width: 20px;
+    height: 20px;
+    color: red;
+  }
+
   .carousel {
     overflow: hidden;
-    
   }
   .carousel-item {
     display: flex;
@@ -32,7 +45,6 @@
     flex-wrap: wrap;
     z-index: 10;
     justify-content: space-around;
-    
   }
 
   .carousel-inner {
@@ -44,81 +56,77 @@
 }
 
 @media (max-width: 1200px) and (min-width: 768px) {
-    .bullets-container {
-      display: flex;
-      justify-content: center;
-    }
-  
-    .bullets {
-      width: 10px;
-      height: 10px;
-      background-color: grey;
-      opacity: 0.5;
-      border-radius: 50%;
-    }
-  
-    .bullets:not(:last-child) {
-      margin-right: 5px;
-    }
-  
-    .carousel {
-      overflow: hidden;
-      
-    }
-    .carousel-item {
-      display: flex;
-      flex-shrink: 0;
-      width: 100%;
-      flex-wrap: wrap;
-      z-index: 10;
-      justify-content: space-around;
-      
-    }
-  
-    .carousel-inner {
-      display: flex;
-      margin-bottom: 30px;
-      transition: transform 1s linear;
-      z-index: 10;
-    }
+  .bullets-container {
+    display: flex;
+    justify-content: center;
   }
 
-  @media screen and (min-width: 1201px) {
-    .bullets-container {
-      display: flex;
-      justify-content: center;
-    }
-  
-    .bullets {
-      width: 10px;
-      height: 10px;
-      background-color: grey;
-      opacity: 0.5;
-      border-radius: 50%;
-    }
-  
-    .bullets:not(:last-child) {
-      margin-right: 5px;
-    }
-  
-    .carousel {
-      overflow: hidden;
-      
-    }
-    .carousel-item {
-      display: flex;
-      flex-shrink: 0;
-      width: 100%;
-      flex-wrap: wrap;
-      z-index: 10;
-      justify-content: space-around;
-      
-    }
-  
-    .carousel-inner {
-      display: flex;
-      margin-bottom: 30px;
-      transition: transform 1s linear;
-      z-index: 10;
-    }
+  .bullets {
+    width: 10px;
+    height: 10px;
+    background-color: grey;
+    opacity: 0.5;
+    border-radius: 50%;
   }
+
+  .bullets:not(:last-child) {
+    margin-right: 5px;
+  }
+
+  .carousel {
+    overflow: hidden;
+  }
+  .carousel-item {
+    display: flex;
+    flex-shrink: 0;
+    width: 100%;
+    flex-wrap: wrap;
+    z-index: 10;
+    justify-content: space-around;
+  }
+
+  .carousel-inner {
+    display: flex;
+    margin-bottom: 30px;
+    transition: transform 1s linear;
+    z-index: 10;
+  }
+}
+
+@media screen and (min-width: 1201px) {
+  .bullets-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .bullets {
+    width: 10px;
+    height: 10px;
+    background-color: grey;
+    opacity: 0.5;
+    border-radius: 50%;
+  }
+
+  .bullets:not(:last-child) {
+    margin-right: 5px;
+  }
+
+  .carousel {
+    overflow: hidden;
+  }
+  .carousel-item {
+    display: flex;
+    flex-shrink: 0;
+    width: 100%;
+    flex-wrap: wrap;
+    z-index: 10;
+    justify-content: space-around;
+  }
+
+  .carousel-inner {
+    display: flex;
+    margin-bottom: 30px;
+    transition: transform 1s linear;
+    z-index: 10;
+  }
+}

@@ -9,8 +9,12 @@ const Catalog = ({ changePage, setProduct }) => {
 
   return (
     <div className="container catalog_container">
-      <CatalogHead />
-      <ProductsList filter={filter} setProduct={setProduct} changePage={changePage} />
+      <CatalogHead setFilter={setFilter} />
+      <ProductsList
+        filter={filter}
+        setProduct={setProduct}
+        changePage={changePage}
+      />
     </div>
   );
 };

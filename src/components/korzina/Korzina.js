@@ -19,7 +19,17 @@ const Korzina = ({ korzina }) => {
           {product.price}
           </li>
           
+
         ))}
+        <p>
+            Оформление заказа
+        </p>
+        <form>
+          <input/>
+          <input/>
+          <input/>
+          <input/>
+        </form>
       </ul>
     </div>
   );

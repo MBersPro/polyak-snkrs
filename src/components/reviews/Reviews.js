@@ -1,17 +1,17 @@
 import React from 'react';
-import Iphone from "./img/iphone.png"
-import IphoneDesktop from "./img/iphoneDesktop.png"
+import IphonePhone from "./img/iphonePhone.png"
+import iphoneTabletAndDesktop from "./img/iphoneTablet.png"
 import "./Reviews.css"
 const Reviews = () => {
     return (
         <div className='container_reviews container' id="review">
-            <div className='reviews_container_h2'>
-                <span className="reviews_back">ОТЗЫВЫ</span>
-                <h2 className='reviews_h2'>ОТЗЫВЫ</h2>
+            <div className='reviews_titleContainer'>
+                <span className="reviews_titleBack">ОТЗЫВЫ</span>
+                <h2 className='reviews_title'>ОТЗЫВЫ</h2>
             </div> 
             <div className='div_rest_reviews'>  
-                <img src={Iphone} alt='iphone' className='iphone_img_reviews'/>
-                <img src={IphoneDesktop} alt='iphoneDesktop' className='iphoneDesktop_img_reviews'/>
+                <img src={IphonePhone} alt='iphone' className='iphonePhone_img_reviews'/>
+                <img src={iphoneTabletAndDesktop} alt='iphone' className='iphoneTabletAndDesktop_img_reviews'/>
                 <p className='see_more_reviews'>Посмотреть больше отзывов</p>
                 <form className='form_reviews'>
                     <h3 className='give_feedback_reviews'>Оставить отзыв</h3>

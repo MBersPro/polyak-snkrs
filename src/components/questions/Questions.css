@@ -7,7 +7,7 @@
         margin-bottom: 25px;
     }
     .questions_detailsContainer{
-        margin-bottom: 44px;
+        margin-bottom: 24px;
     }
     .li_question:not(:last-child){
         margin-bottom: 58px;
@@ -100,7 +100,7 @@
         margin-bottom: 80px;
     }
     .questions_detailsContainer{
-        margin-bottom: 157px;
+        margin-bottom: 100px;
     }
     .summary_question:before {
         content: '+';
@@ -194,10 +194,10 @@
     .questions_titleContainer{
         position: relative;
         font-style: normal; 
-        margin-bottom: 126px;
+        margin-bottom: 100px;
     }
     .questions_detailsContainer{
-        margin-bottom: 181px;
+        margin-bottom: 70px;
     }
     .questions_titleBack{
         font-weight: var(--r-fw);
@@ -217,16 +217,18 @@
     }
     .summary_question:before {
         content: '+';
-        margin-right: 47px;
+        margin-right: 36px;
         font-weight: var(--r-fw);
-        font-size: 100px;
+        font-size: 70px;
+        line-height: 70px;
       }
     .detail_question[open] .summary_question:before {
         content: '×';
         margin-right: 47px;
         font-weight: var(--r-fw);
         color: var(--b-orange);
-        font-size: 100px;
+        font-size: 70px;
+        line-height: 70px;
     }
     .summary_question{
         display: flex;
@@ -240,7 +242,10 @@
         transition: 0.5s;
         outline: none;
         list-style: none;
-        
+        line-height: 38px;
+    }
+    .detail_question:not(:last-child){
+        margin-bottom: 30px;
     }
     .summary_question:focus, .summary_question:active{
         outline: none;
@@ -262,13 +267,13 @@
         font-family: var(--font);
         font-style: normal;
         font-weight: var(--l-fw);
-        font-size: 48px;
+        font-size: 36px;
         line-height: 160.2%;
         text-align: center;
         margin-bottom: 28px;
     }
     .input_ask_a_question{
-        width: 631px;
+        width: 580px;
         height: 74px;
         border: 1px solid var(--b-orange);
         border-radius: 2px;

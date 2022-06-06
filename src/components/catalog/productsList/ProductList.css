@@ -5,19 +5,18 @@
   }
 
   .bullets {
-    width: 7px;
-    height: 7px;
-    border: solid 3px #fc6701;
-    opacity: 0.5;
+    width: 6px;
+    height: 6px;
+    border: solid 3px #5a5a5a;
+
     border-radius: 50%;
   }
 
   .activeBullet {
-    background-color: #fc6701;
-    width: 7px;
-    height: 7px;
-    border: solid 3px #fc6701;
-    opacity: 0.5;
+    background-color: #5a5a5a;
+    width: 6px;
+    height: 6px;
+    border: solid 3px #5a5a5a;
     border-radius: 50%;
   }
 

@@ -13,15 +13,29 @@ const chunk = (input, size) => {
 };
 
 let interval = null;
+const getViewPort = () => {
+  const test = document.documentElement.clientWidth;
+  console.log(test)
+  if (test <= 767) return 4
+  return 6
+}
 
 const ProductsList = ({ filter, changePage, setProduct }) => {
   const [products, setProducts] = useState([]);
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [slideSize, setSlideSize] = useState(getViewPort());
 
+  console.log(slideSize)
   useEffect(() => {
+    const resizeHandler = () => {
+      setSlideSize(getViewPort())
+    }
+    console.log("some")
+    window.addEventListener("resize", resizeHandler)
     getProducts().then((response) => setProducts([...response]));
     return () => {
       clearInterval(interval);
+      window.removeEventListener("resize", resizeHandler)
     };
   }, []);
 
@@ -45,10 +59,15 @@ const ProductsList = ({ filter, changePage, setProduct }) => {
     document.querySelector("body").style.overflow = "hidden";
   };
 
-  const chunkedProducts = useMemo(() => chunk(products, 4), [products]);
+  const chunkedProducts = useMemo(() => chunk(products, slideSize), [products, slideSize]);
 
   useEffect(() => {
     if (!chunkedProducts.length) return;
+    if (filter !== "all" && interval) {
+      clearInterval(interval);
+      setCurrentSlide(0)
+      return
+    }
     if (interval) return;
     if (filter === "all") {
       interval = setInterval(() => {
@@ -60,10 +79,9 @@ const ProductsList = ({ filter, changePage, setProduct }) => {
         });
       }, 5000);
     }
-  }, []);
+  }, [chunkedProducts, filter]);
 
   const changeIndex = (index) => {
-    // const indexx = 1
     setCurrentSlide(index);
     console.log(currentSlide);
   };

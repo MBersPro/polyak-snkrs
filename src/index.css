@@ -12,8 +12,6 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; 
-}
-html, body {
   overflow-x: hidden;
 }
 ::-webkit-scrollbar {
@@ -112,6 +110,7 @@ img {
 :root {
   --b-orange: #fc6701;
   --font: "Oswald", sans-serif;
+  --korzina-font: "Roboto", sans-serif;
   --l-fw: 300;
   --r-fw: 400;
   --h2-mobile-size: 24px;

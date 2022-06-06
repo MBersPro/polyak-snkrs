@@ -9,7 +9,7 @@ const Korzina = ({ korzina }) => {
 
   return (
     <div>
-      <ul>
+      <ul className="korzina_container_products">
         {korzina.map((product) => (
           <li key={product.id} className="korzina_container_product">
             <div className="korzina_container_product_img">
@@ -30,17 +30,24 @@ const Korzina = ({ korzina }) => {
             {product.price}
           </li>
         ))}
-        <p>
+        
+      </ul>
+      <div className="korzina_orderingContainer">
+        <p className="korzina_orderingTitle">
             Оформление заказа
         </p>
-        <form>
-          <input/>
-          <input/>
-          <input/>
-          <input/>
+        <p>
+        {`Сумма вашего заказа: ${amountOfProducts()}`}
+        </p>
+        <form className="korzina_orderingForm">
+          <input className="korzina_orderingFormInput"/>
+          <input className="korzina_orderingFormInput"/>
+          <input className="korzina_orderingFormInput"/>
+          <input className="korzina_orderingFormInput"/>
         </form>
-      </ul>
-       <div>{`Сумма вашего заказа: ${amountOfProducts()}`}</div>
+        <button className="korzina_confirmOrderBtn">Подтвердить заказ</button>
+      </div>
+       <div></div>
       {korzina.length === 0 && <p>В вашей корзине пока пусто</p>}
     </div>
   );

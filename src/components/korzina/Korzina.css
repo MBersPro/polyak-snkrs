@@ -3,6 +3,9 @@
         display: flex;
         justify-content: space-between;
     }
+    .korzina_container_products{
+        margin-bottom: 170px;
+    }
     .korzina_container_product:not(:last-child){
         border-bottom: 1px solid black;
         padding-bottom: 40px;

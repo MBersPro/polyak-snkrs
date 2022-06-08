@@ -31,7 +31,7 @@
     background-color: white;
     transition: 0.4s;
     width: 100vw;
-    position: fixed;
+    position: relative;
   }
 
   .mobile_header_passive {

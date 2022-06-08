@@ -1,14 +1,18 @@
 @media screen and (max-width: 767px) {
     .screen{
-        background: url('./screen_bg-img.jpg');
+        background-image: url('./screen_bg-img.jpg');
+        background-repeat: no-repeat;
         background-size: cover;
         height: 215px;
+        transition: background-image 0.5s ease-out;
     }
 }
 @media (max-width: 1200px) and (min-width: 768px) {
     .screen{
-        background: url('./screen_bg-img.jpg');
+        background-image: url('./screen_bg-img.jpg');
+        background-repeat: no-repeat;
         background-size: cover;
         height: 400px;
+        transition: background-image 0.5s ease-in-out;
     }
 }

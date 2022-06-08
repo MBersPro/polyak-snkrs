@@ -4,7 +4,7 @@ import { ReactComponent as DelBtn } from "./svg/delBtn.svg";
 import { ReactComponent as NameSvg } from "./svg/Name.svg";
 import { ReactComponent as PhoneSvg } from "./svg/Phone.svg";
 const Korzina = ({ korzina }) => {
-
+  
    const amountOfProducts = () => korzina.reduce(
      (previousValue, currentValue) => previousValue.price + currentValue.price
    );

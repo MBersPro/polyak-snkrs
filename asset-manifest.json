@@ -1,9 +1,12 @@
 {
   "files": {
-    "main.css": "/polyak-snkrs/static/css/main.a07dbdb9.css",
-    "main.js": "/polyak-snkrs/static/js/main.3ab81108.js",
+    "main.css": "/polyak-snkrs/static/css/main.f10bea16.css",
+    "main.js": "/polyak-snkrs/static/js/main.d856d18d.js",
     "static/media/screen_bg-img.jpg": "/polyak-snkrs/static/media/screen_bg-img.9ddc5c6c4074dc75a3ad.jpg",
+    "static/media/screen_bg-img4.jpg": "/polyak-snkrs/static/media/screen_bg-img4.86372cf411327b26d046.jpg",
+    "static/media/screen_bg-img5.jpg": "/polyak-snkrs/static/media/screen_bg-img5.4c5be0b9c68ab8ea3a74.jpg",
     "static/media/iphoneTablet.png": "/polyak-snkrs/static/media/iphoneTablet.acfc01f15ba33d5f01cc.png",
+    "static/media/screen_bg-img2.jpg": "/polyak-snkrs/static/media/screen_bg-img2.4ef5f2246dc626402c70.jpg",
     "static/media/iphonePhone.png": "/polyak-snkrs/static/media/iphonePhone.abef437569a5f9566e84.png",
     "static/media/logo.svg": "/polyak-snkrs/static/media/logo.4b05fb91b24aab57aac0d8671ff30504.svg",
     "static/media/whatsapp.svg": "/polyak-snkrs/static/media/whatsapp.2db65d331fb34fd94cf86fde2d8d89dd.svg",
@@ -16,11 +19,11 @@
     "static/media/mail.svg": "/polyak-snkrs/static/media/mail.303db1ca29cbbeade29bf12cd2eb81c8.svg",
     "static/media/Name.svg": "/polyak-snkrs/static/media/Name.415bba2f76f410bf7d33539a7d161a6f.svg",
     "static/media/Phone.svg": "/polyak-snkrs/static/media/Phone.472757b3e71f36df9ca3c0e8a6bcae0b.svg",
-    "main.a07dbdb9.css.map": "/polyak-snkrs/static/css/main.a07dbdb9.css.map",
-    "main.3ab81108.js.map": "/polyak-snkrs/static/js/main.3ab81108.js.map"
+    "main.f10bea16.css.map": "/polyak-snkrs/static/css/main.f10bea16.css.map",
+    "main.d856d18d.js.map": "/polyak-snkrs/static/js/main.d856d18d.js.map"
   },
   "entrypoints": [
-    "static/css/main.a07dbdb9.css",
-    "static/js/main.3ab81108.js"
+    "static/css/main.f10bea16.css",
+    "static/js/main.d856d18d.js"
   ]
 }

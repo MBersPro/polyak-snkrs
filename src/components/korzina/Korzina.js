@@ -38,10 +38,11 @@ const Korzina = ({ korzina }) => {
           </div>  
           </li>
         ))}
-        <p className="korzina_orderTotal">
+        
+      </ul>
+      <p className="korzina_orderTotal">
               {`Итого: ${amountOfProducts()}`}
         </p>
-      </ul>
       <div className="korzina_orderingContainer">
         <p className="korzina_orderingTitle">
             Оформление заказа

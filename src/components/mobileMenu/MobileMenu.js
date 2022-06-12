@@ -79,7 +79,7 @@ const MobileMenu = ({ mobileMenu, closeMobileMenu, changePage, page, korzina, or
             </div>
           </>
         )}
-        {page.contacts && <Contacts />}
+        
         {page.korzina && <Korzina korzina={korzina}/>}
       </div>
     </div>

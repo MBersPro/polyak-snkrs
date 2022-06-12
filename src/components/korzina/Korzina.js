@@ -71,7 +71,7 @@ const Korzina = ({ korzina }) => {
         <button className="korzina_confirmOrderBtn">Подтвердить заказ</button>
       </div>
        <div></div>
-      {korzina.length === 0 && <p>В вашей корзине пока пусто</p>}
+      {/* {korzina.length === 0 && <p>В вашей корзине пока пусто</p>} */}
     </div>
   );
 };

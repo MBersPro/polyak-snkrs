@@ -57,7 +57,7 @@ const App = () => {
   return (
     <>
       <Screen>
-        <Header mobileMenu={mobileMenu} changeMobileMenu={changeMobileMenu} korzina={korzina} changePage={changePage}>
+        <Header mobileMenu={mobileMenu} changeMobileMenu={changeMobileMenu} korzina={korzina} changePage={changePage} page={page}>
           <MobileMenu
             page={page}
             mobileMenu={mobileMenu}

@@ -13,31 +13,28 @@ const chunk = (input, size) => {
 };
 
 let interval = null;
-const getViewPort = () => {
-  const test = document.documentElement.clientWidth;
-  console.log(test)
-  if (test <= 767) return 4
-  return 6
-}
 
-const ProductsList = ({ filter, changePage, setProduct }) => {
+const getSlideSize = (viewPort) => {
+  if (viewPort === "mobile") return 6;
+  if (viewPort === "tablet") return 8;
+  return 12
+};
+
+const ProductsList = ({ filter, changePage, setProduct, viewPort }) => {
   const [products, setProducts] = useState([]);
   const [currentSlide, setCurrentSlide] = useState(0);
-  const [slideSize, setSlideSize] = useState(getViewPort());
+  const [slideSize, setSlideSize] = useState(0);
 
-  console.log(slideSize)
   useEffect(() => {
-    const resizeHandler = () => {
-      setSlideSize(getViewPort())
-    }
-    console.log("some")
-    window.addEventListener("resize", resizeHandler)
     getProducts().then((response) => setProducts([...response]));
     return () => {
       clearInterval(interval);
-      window.removeEventListener("resize", resizeHandler)
     };
   }, []);
+
+  useEffect(() => {
+    setSlideSize(getSlideSize(viewPort))
+  }, [viewPort]);
 
   useEffect(() => {
     if (filter === "all") {
@@ -59,14 +56,17 @@ const ProductsList = ({ filter, changePage, setProduct }) => {
     document.querySelector("body").style.overflow = "hidden";
   };
 
-  const chunkedProducts = useMemo(() => chunk(products, slideSize), [products, slideSize]);
+  const chunkedProducts = useMemo(
+    () => chunk(products, slideSize),
+    [products, slideSize]
+  );
 
   useEffect(() => {
     if (!chunkedProducts.length) return;
     if (filter !== "all" && interval) {
       clearInterval(interval);
-      setCurrentSlide(0)
-      return
+      setCurrentSlide(0);
+      return;
     }
     if (interval) return;
     if (filter === "all") {
@@ -106,9 +106,15 @@ const ProductsList = ({ filter, changePage, setProduct }) => {
         {chunkedProducts.map((product, index) => (
           <div
             key={index}
-            className={filter === "all" ? `${index === currentSlide ? "activeBullet" : "bullets"}` : "pagination"}
+            className={
+              filter === "all"
+                ? `${index === currentSlide ? "activeBullet" : "bullets"}`
+                : "pagination"
+            }
             onClick={() => changeIndex(index)}
-          >{filter !== "all" && index + 1}</div>
+          >
+            {filter !== "all" && index + 1}
+          </div>
         ))}
       </div>
     </div>

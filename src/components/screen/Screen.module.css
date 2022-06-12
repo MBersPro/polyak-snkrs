@@ -1,15 +1,26 @@
 @media screen and (max-width: 767px) {
     .screen{
-    
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 215px;
+        transition: background-image 0.5s ease-out;
     }
 }
 @media (max-width: 1200px) and (min-width: 768px) {
     .screen{
-        
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 400px;
+        transition: background-image 0.5s ease-in-out;
     }
 }
+
 @media screen and (min-width: 1201px) {
     .screen{
-        background-image: none;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 658px;
+        transition: background-image 0.5s ease-in-out;
     }
 }
+

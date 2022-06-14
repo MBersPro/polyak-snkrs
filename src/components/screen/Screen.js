@@ -29,7 +29,7 @@ const Screen = ({ children, viewPort }) => {
       timeout = setInterval(() => {
       setBgImage(imagesArray[count % imagesArray.length]);
       count += 1;
-    }, 5000);
+    }, 10000);
   };
 
   const imagesArray = useMemo(() => {

@@ -34,6 +34,7 @@ const ProductFullInfo = ({ product, addToKorzina, changePage }) => {
     <>
       <div className="overlay">
         <div className="container_productFullInfo container">
+        <div className="productFullInfo_BackBtnAndImage_container">
           <button
             onClick={onBack}
             type="button"
@@ -41,11 +42,7 @@ const ProductFullInfo = ({ product, addToKorzina, changePage }) => {
           >
             ❮ Назад
           </button>
-          <p className="productFullInfo_name_product">
-            <span>{product.brand}</span>
-            <span>{product.model}</span>
-          </p>
-          <p className="productFullInfo_price_product">{product.price} ₽</p>
+          
           <div className="productFullInfo_image_container">
             <div
               onClick={rotationLeft}
@@ -65,6 +62,13 @@ const ProductFullInfo = ({ product, addToKorzina, changePage }) => {
               <button type="button"  className="right">❯</button>
             </div>
           </div>
+        </div>
+        <div className="productFullInfo_TxtAndAddBtn_container">
+          <p className="productFullInfo_name_product">
+            <span>{product.brand}</span>
+            <span>{product.model}</span>
+          </p>
+          <p className="productFullInfo_price_product">{product.price} ₽</p>
           <p className="productFullInfo_shoe_size">Выбрать размер</p>
           <select className="select_shoe_size_ProductFullInfo">
             <option className="option_shoe_size_ProductFullInfo">3.5 Y</option>
@@ -80,6 +84,7 @@ const ProductFullInfo = ({ product, addToKorzina, changePage }) => {
             {product.description}
           </p>
           <p className="productFullInfo_color_model">Цвет модели:</p>
+          <div className="productFullInfo_addToBasket_btn_container">
           <button
             onClick={onAddToKorzina}
             type="button"
@@ -87,6 +92,8 @@ const ProductFullInfo = ({ product, addToKorzina, changePage }) => {
           >
             Добавить в корзину
           </button>
+          </div>
+        </div>
         </div>
       </div>
     </>

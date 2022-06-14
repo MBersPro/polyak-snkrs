@@ -42,11 +42,10 @@
   right: 20px;
   width: 40px;
   height: 40px;
-  background-color: #000000;
-  color: white;
-  border: 1px solid black;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  color: rgb(0, 0, 0);
   font-size: 30px;
-  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -57,11 +56,10 @@
   left: 20px;
   width: 40px;
   height: 40px;
-  background-color: #000000;
-  border: 1px solid black;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
   font-size: 30px;
-  border-radius: 50%;
-  color: white;
+  color: rgb(0, 0, 0);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -216,11 +214,12 @@
   right: 20px;
   width: 60px;
   height: 60px;
-  background-color: #0000006c;
-  color: white;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  color: rgb(0, 0, 0);
   border: none;
   font-size: 30px;
-  border-radius: 50%;
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -231,11 +230,11 @@
   left: 20px;
   width: 60px;
   height: 60px;
-  background-color: #0000006c;
+  background-color: rgba(0, 0, 0, 0);
   border: none;
   font-size: 30px;
-  border-radius: 50%;
-  color: white;
+
+  color: rgb(0, 0, 0);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -363,17 +362,20 @@
   .container_productFullInfo{
     padding-top: 51px;
     padding-bottom: 100px;
+    display: flex;
+    justify-content: space-between;
   }
   .productFullInfo_image{
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
   }
   
   .productFullInfo_image_container{
-    width: 100%;
+    width: 80%;
     margin-bottom: 116px;
     position: relative;
+    height: 527px;
   }
   .productFullInfo_rotationLeft_container {
     position: absolute;
@@ -390,11 +392,10 @@
   right: 20px;
   width: 60px;
   height: 60px;
-  background-color: #0000006c;
-  color: white;
+  background-color: rgba(0, 0, 0, 0);
   border: none;
+  color: rgb(0, 0, 0);
   font-size: 30px;
-  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -405,11 +406,10 @@
   left: 20px;
   width: 60px;
   height: 60px;
-  background-color: #0000006c;
+  background-color: rgba(0, 0, 0, 0);
   border: none;
   font-size: 30px;
-  border-radius: 50%;
-  color: white;
+  color: rgb(0, 0, 0);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -426,6 +426,7 @@
   font-family: var(--font);
   font-style: normal;
   font-weight: var(--l-fw);
+  display: inline-block;
 }
 .select_shoe_size_ProductFullInfo:focus,
 .select_shoe_size_ProductFullInfooption_shoe_size_ProductFullInfo:hover,
@@ -455,7 +456,7 @@
   font-family: var(--font);
   font-style: normal;
   font-weight: var(--r-fw);
-  font-size: 40px;
+  font-size: 36px;
   line-height: 59px;
   color: #000000;
   margin-bottom: 23px;
@@ -473,10 +474,12 @@
   font-family: var(--font);
   font-style: normal;
   font-weight: var(--l-fw);
-  font-size: 24px;
+  font-size: 20px;
   line-height: 36px;
   color: #808080;
   margin-bottom: 28px;
+  display: inline-block;
+  max-width: 400px;
 }
 .productFullInfo_color_model{
   font-family: var(--font);
@@ -496,15 +499,19 @@
   color: #808080;
   margin-bottom: 32px;
 }
+/* .productFullInfo_addToBasket_btn_container{
+  display: flex;
+  justify-content: center;
+} */
 .productFullInfo_addToBasket_btn{
-  width: 100%;
-  height: 150px;
+  width: 340px;
+  height: 80px;
   border: none;
   font-family: var(--font);
   font-style: normal;
   font-weight: var(--r-fw);
-  font-size: 40px;
-  line-height: 59px;
+  font-size: 20px;
+  line-height: 30px;
   background-color: #FB6702;
   color: #000000;
 }

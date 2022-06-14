@@ -32,8 +32,8 @@ const Korzina = ({ korzina }) => {
               <div className="korzina_container_txt">
                 <p className="korzina_price_product">{product.price}₽</p>
                 <span className="korzina_name_product">
-                  {product.brand}
-                  {product.model}
+                  <p className="korzina_nameBrand_product">{product.brand}</p>
+                  <p>{product.model}</p>
                 </span>
                 <p className="korzina_size_product">Размер: </p>
               </div>

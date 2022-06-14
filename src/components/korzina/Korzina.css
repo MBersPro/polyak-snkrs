@@ -26,8 +26,8 @@
         color: #808080;
     }
     .korzina_container_product_img{
-        width: 130px;
-        height: 130px;
+        width: 170px;
+        height: 170px;
         background-color: rgb(236, 236, 236);
         margin-right: 15px;
     }
@@ -171,34 +171,36 @@
 @media (max-width: 1200px) and (min-width: 768px) {
     .korzina_container_product{
         display: flex;
-        justify-content: space-around;
-        padding: 20px 20px;
+        padding: 10px 10px;
         background-color: #eeeeee65;
         -webkit-box-shadow: 0px 5px 20px 2px rgba(34, 60, 80, 0.2);
         -moz-box-shadow: 0px 5px 20px 2px rgba(34, 60, 80, 0.2);
         box-shadow: 0px 5px 20px 2px rgba(34, 60, 80, 0.2);
+        margin-bottom: 10px;
     }
     .korzina_container_products{
         margin-bottom: 170px;
         display: flex;
+        flex-direction: column;
         flex-wrap: wrap;
-        justify-content: space-between;
+        justify-content: center;
     }
-    .korzina_container_product:nth-last-child(n+2){
-        margin-bottom: 10px;
+    .korzina_nameBrand_product{
+        margin-bottom: 5px;
     }
     .korzina_price_product{
         font-family: var(--font);
         font-style: normal;
         font-weight: var(--l-fw);
-        font-size: 14px;
+        font-size: 24px;
         line-height: 21px;
         color: #808080;
+        margin-bottom: 12px;
     
     }
     .korzina_container_product_img{
-        width: 130px;
-        height: 130px;
+        width: 300px;
+        height: 300px;
         background-color: rgb(236, 236, 236);
         margin-right: 15px;
     }
@@ -208,27 +210,27 @@
         object-fit: contain;
     }
     .korzina_container_txt{
-        width: 185px;
+        width: 400px;
         display: flex;
         flex-direction: column;
         border-bottom: 1px solid rgba(217, 217, 217, 0.782);
-        margin-bottom: 12px;
-        padding-bottom: 12px;
+        margin-bottom: 20px;
+        padding-bottom: 20px;
     }
     .korzina_name_product{
         font-family: var(--font);
         font-style: normal;
         font-weight: var(--r-fw);
-        font-size: 14px;
-        line-height: 36px;
+        font-size: 32px;
         color: #000000;
+        display: block;
+        margin-bottom: 20px;
     }
     .korzina_size_product{
         font-family: var(--font);
         font-style: normal;
         font-weight: var(--l-fw);
-        font-size: 14px;
-        line-height: 21px;
+        font-size: 24px;
         color: #808080;
     }
     .korzina_delete_product_btn{
@@ -241,11 +243,13 @@
         font-family: var(--font);
         font-style: normal;
         font-weight: var(--r-fw);
-        font-size: 18px;
+        font-size: 24px;
         color: #3F3F3F;
     }
     .korzina_delBtn{
         margin-right: 7px;
+        width: 30px;
+        height: 30px;
     }
     .korzina_orderingContainer{
         display: flex;
@@ -261,8 +265,7 @@
         font-family: var(--font);
         font-style: normal;
         font-weight: var(--l-fw);
-        font-size: 24px;
-        line-height: 36px;   
+        font-size: 24px; 
         color: #000000;
         margin-bottom: 78px;
     }
@@ -290,8 +293,7 @@
         font-family: var(--korina-font);
         font-style: normal;
         font-weight: var(--r-fw);
-        font-size: 14px;
-        line-height: 14px;
+        font-size: 24px;
         letter-spacing: 0.01em; 
         color: rgba(117, 117, 117, 0.5);
     }
@@ -299,8 +301,7 @@
         font-family: var(--korina-font);
         font-style: normal;
         font-weight: var(--r-fw);
-        font-size: 14px;
-        line-height: 14px;
+        font-size: 24px;
         letter-spacing: 0.01em; 
         color: #757575;
         margin-bottom: 4px;
@@ -314,7 +315,7 @@
     }
     .korzina_orderingFormInputSvg{
         position: absolute;
-        top: 37px;
+        top: 52px;
         left: 15px;
     }
     .korzina_orderTotal{

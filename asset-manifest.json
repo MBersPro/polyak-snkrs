@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/polyak-snkrs/static/css/main.cc95abfe.css",
-    "main.js": "/polyak-snkrs/static/js/main.ceb96491.js",
+    "main.js": "/polyak-snkrs/static/js/main.100be284.js",
     "static/media/snkrs_image_4t.jpg": "/polyak-snkrs/static/media/snkrs_image_4t.dfbf1c13188abb15aec9.jpg",
     "static/media/snkrs_image_2t.jpg": "/polyak-snkrs/static/media/snkrs_image_2t.6f374a8998dfbc64afc1.jpg",
     "static/media/snkrs_image_3t.jpg": "/polyak-snkrs/static/media/snkrs_image_3t.a802dd95df95e1ae5bf6.jpg",
@@ -24,10 +24,10 @@
     "static/media/Name.svg": "/polyak-snkrs/static/media/Name.415bba2f76f410bf7d33539a7d161a6f.svg",
     "static/media/Phone.svg": "/polyak-snkrs/static/media/Phone.472757b3e71f36df9ca3c0e8a6bcae0b.svg",
     "main.cc95abfe.css.map": "/polyak-snkrs/static/css/main.cc95abfe.css.map",
-    "main.ceb96491.js.map": "/polyak-snkrs/static/js/main.ceb96491.js.map"
+    "main.100be284.js.map": "/polyak-snkrs/static/js/main.100be284.js.map"
   },
   "entrypoints": [
     "static/css/main.cc95abfe.css",
-    "static/js/main.ceb96491.js"
+    "static/js/main.100be284.js"
   ]
 }

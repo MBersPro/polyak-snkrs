@@ -17,7 +17,7 @@ let interval = null;
 const getSlideSize = (viewPort) => {
   if (viewPort === "mobile") return 6;
   if (viewPort === "tablet") return 8;
-  return 12
+  return 12;
 };
 
 const ProductsList = ({ filter, changePage, setProduct, viewPort }) => {
@@ -33,7 +33,10 @@ const ProductsList = ({ filter, changePage, setProduct, viewPort }) => {
   }, []);
 
   useEffect(() => {
-    setSlideSize(getSlideSize(viewPort))
+    setSlideSize(getSlideSize(viewPort));
+    // return () => {
+    //   clearInterval(interval);
+    // };
   }, [viewPort]);
 
   useEffect(() => {
@@ -79,11 +82,10 @@ const ProductsList = ({ filter, changePage, setProduct, viewPort }) => {
         });
       }, 5000);
     }
-  }, [chunkedProducts, filter]);
+  }, [chunkedProducts, filter, viewPort]);
 
   const changeIndex = (index) => {
     setCurrentSlide(index);
-    console.log(currentSlide);
   };
 
   return (

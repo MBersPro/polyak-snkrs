@@ -20,30 +20,33 @@ import Product from "./productsSlide/Product";
 //   return 12;
 // };
 
-const sliderSettings = {
-  dots: true,
-  infinite: true,
-  autoplay: true,
-  autoplaySpeed: 5000,
-  speed: 2000,
-  slidesToShow: 2,
-  slidesToScroll: 1,
-  rows: 2,
-  pauseOnHover: true,
-  swipeToSlide: true,
-}
-
 const ProductsList = ({ filter, changePage, setProduct, viewPort }) => {
   const [products, setProducts] = useState([]);
   const [currentSlide, setCurrentSlide] = useState(0);
   const [slideSize, setSlideSize] = useState(0);
 
-  // useEffect(() => {
-  //   getProducts().then((response) => setProducts([...response]));
-  //   return () => {
-  //     clearInterval(interval);
-  //   };
-  // }, []);
+  const slidesToShow = () => {
+    if (viewPort === "desktop") return 6;
+    if (viewPort === "tablet") return 4;
+    if (viewPort === "mobile") return 2;
+  }
+
+  const sliderSettings = {
+    dots: true,
+    infinite: true,
+    autoplay: true,
+    autoplaySpeed: 5000,
+    speed: 1000,
+    slidesToShow: slidesToShow(),
+    slidesToScroll: 1,
+    rows: 2,
+    pauseOnHover: true,
+    swipeToSlide: true,
+  };
+
+  useEffect(() => {
+    getProducts().then((response) => setProducts([...response]));
+  }, []);
 
   // useEffect(() => {
   //   setSlideSize(getSlideSize(viewPort));
@@ -130,12 +133,12 @@ const ProductsList = ({ filter, changePage, setProduct, viewPort }) => {
     //     ))}
     //   </div>
     // </div>
-    <Slider {...sliderSettings}>
-      <div>1</div>
-      <div>2</div>
-      <div>3</div>
-      <div>4</div>
-      <div>5</div>
+    <Slider className="slider" {...sliderSettings}>
+      {products.map((product) => (
+        <li>
+          <Product openProduct={openProduct} product={product} />
+        </li>
+      ))}
     </Slider>
   );
 };

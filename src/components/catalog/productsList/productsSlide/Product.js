@@ -1,13 +1,14 @@
 import React from "react";
-import "./Product.css"
+import "./Product.css";
 
 const Product = ({ openProduct, product }) => {
   return (
-    <div
-      onClick={() => openProduct(product)}
-      key={product.id}
-      className="product"
-    >
+    <div className="testmest">
+      <div
+        onClick={() => openProduct(product)}
+        key={product.id}
+        className="product"
+      >
         <div className="productList_image_container">
           <img
             className="productList_image"
@@ -19,6 +20,7 @@ const Product = ({ openProduct, product }) => {
           <span>{product.name}</span>
         </p>
         <p className="productList_price_product">{product.price} ₽</p>
+      </div>
     </div>
   );
 };

@@ -21,6 +21,13 @@ const CatalogHead = ({ setFilter }) => {
               <ul className="catalogHead_dropdown_list_background">
                 <li
                   className="catalogHead_sub_menu_link"
+                  id="Yeezy"
+                  onClick={onChangeFilter}
+                >
+                  Все Yeezy
+                </li>
+                <li
+                  className="catalogHead_sub_menu_link"
                   id="750"
                   onClick={onChangeFilter}
                 >

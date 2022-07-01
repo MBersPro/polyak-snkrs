@@ -8,7 +8,7 @@ const CatalogHead = ({ setFilter }) => {
 
   return (
     <div className="catalogHead_container">
-      <div className="catalogHead_titleContainer">
+      <div id="all" onClick={onChangeFilter} className="catalogHead_titleContainer">
         <span className="catalogHead_titleBack">КАТАЛОГ</span>
         <h2 className="catalogHead_title">КАТАЛОГ</h2>
       </div>

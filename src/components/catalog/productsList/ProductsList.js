@@ -7,6 +7,7 @@ import Product from "./productsSlide/Product";
 const ProductsList = ({ filter, changePage, setProduct, viewPort }) => {
   const [products, setProducts] = useState([]);
 
+
   const slidesToShow = () => {
     if (viewPort === "desktop") return 6;
     if (viewPort === "tablet") return 4;

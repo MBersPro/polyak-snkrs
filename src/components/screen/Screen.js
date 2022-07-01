@@ -10,6 +10,7 @@ import image3t from "./snkrs_image_3t.jpg";
 import image4t from "./snkrs_image_4t.jpg";
 
 import styles from "./Screen.module.css";
+import Slider from "react-slick";
 
 const test = {
   mobile: [image1t, image2t, image3t, image4t],
@@ -17,32 +18,49 @@ const test = {
   desktop: [image1d, image2d, image4d, image5d],
 };
 
-let timeout = null;
+// let timeout = null;
 
 const Screen = ({ children, viewPort }) => {
-  const [bgImage, setBgImage] = useState(test[viewPort][0]);
+  const [bgImages, setBgImages] = useState(test[viewPort]);
   //const [imagesArray, setImagesArray] = useState();
 
-    const some = () => {
-    let count = 0;
-      timeout = setInterval(() => {
-      setBgImage(imagesArray[count % imagesArray.length]);
-      count += 1;
-    }, 10000);
+  //   const some = () => {
+  //   let count = 0;
+  //     timeout = setInterval(() => {
+  //     setBgImage(imagesArray[count % imagesArray.length]);
+  //     count += 1;
+  //   }, 10000);
+  // };
+
+  // const imagesArray = useMemo(() => {
+  //   timeout && clearInterval(timeout);
+  //   some()
+  //   return test[viewPort];
+  // }, [viewPort]);
+
+  const settings = {
+    dots: false,
+    infinite: true,
+    autoplay: true,
+    autoplaySpeed: 7000,
+    speed: 3000,
+    slidesToShow: 1,
+    slidesToScroll: 1,
   };
 
-  const imagesArray = useMemo(() => {
-    timeout && clearInterval(timeout);
-    some()
-    return test[viewPort];
-  }, [viewPort]);
-
   return (
-    <div
-      className={styles.screen}
-      style={{ backgroundImage: `url(${bgImage})` }}
-    >
+    <div className={styles.screen}>
       {children}
+      <div className={styles.fool}>
+        <Slider {...settings}>
+          {/* <img className={styles.fool2} src={image1d} alt="some" />
+          <img className={styles.fool2} src={image2d} alt="some" />
+          <img className={styles.fool2} src={image4d} alt="some" /> */}
+          {bgImages.map((image) => (
+            <img className={styles.fool2} src={image} alt="some" />
+          ))}
+        </Slider>
+      </div>
     </div>
   );
 };

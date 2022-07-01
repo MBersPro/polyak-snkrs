@@ -4,11 +4,13 @@
     transition: 0.4s;
     width: 100vw;
     position: relative;
+    z-index: 5;
   }
 
   .mobile_header_passive {
     transition: 0.4s;
     position: relative;
+      z-index: 5;
   }
 
   .header_container {
@@ -32,10 +34,13 @@
     transition: 0.4s;
     width: 100vw;
     position: relative;
+    z-index: 5;
   }
 
   .mobile_header_passive {
     transition: 0.4s;
+    position: relative;
+    z-index: 5;
   }
 
   .header_container {
@@ -59,6 +64,8 @@
     padding-bottom: 30px;
     display: flex;
     justify-content: space-between;
+    position: relative;
+    z-index: 5;
   }
   .header_logo {
     width: 240px;

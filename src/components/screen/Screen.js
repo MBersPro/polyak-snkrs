@@ -2,7 +2,6 @@ import React, { useEffect, useState, useMemo } from "react";
 
 import image1d from "./snkrs_image_1.jpg";
 import image2d from "./snkrs_image_2.jpg";
-//import image3d from "./snkrs_image_3.jpg";
 import image4d from "./snkrs_image_4.jpg";
 import image5d from "./snkrs_image_5.jpg";
 import image1t from "./snkrs_image_1t.jpg";
@@ -37,15 +36,6 @@ const Screen = ({ children, viewPort }) => {
     some()
     return test[viewPort];
   }, [viewPort]);
-
-
-
-  // useEffect(() => {
-  //   some()
-  //   return () => {
-  //     clearInterval(timeout);
-  //   };
-  // }, []);
 
   return (
     <div

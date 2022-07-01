@@ -1,48 +1,79 @@
-import React, { useState, useEffect, useMemo } from "react";
+import React, { useState, useEffect} from "react";
 import "./ProductList.css";
 import { getProducts } from "../../../utils/firebase";
 import Slider from "react-slick";
 import Product from "./productsSlide/Product";
 
-const chunk = (input, size) => {
-  return input.reduce((arr, item, idx) => {
-    return idx % size === 0
-      ? [...arr, [item]]
-      : [...arr.slice(0, -1), [...arr.slice(-1)[0], item]];
-    
-  }, []);
-};
-
-let interval = null;
-
-const getSlideSize = (viewPort) => {
-  if (viewPort === "mobile") return 6;
-  if (viewPort === "tablet") return 8;
-  return 12;
-};
-
 const ProductsList = ({ filter, changePage, setProduct, viewPort }) => {
   const [products, setProducts] = useState([]);
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const [slideSize, setSlideSize] = useState(0);
+
+
+  const slidesToShow = () => {
+    if (viewPort === "desktop") return 6;
+    if (viewPort === "tablet") return 4;
+    if (viewPort === "mobile") return 2;
+  };
+
+  const sliderRows = () => {
+    if (viewPort === "desktop") return 1;
+    if (viewPort === "tablet") return 2;
+    if (viewPort === "mobile") return 3;
+  };
+
+  const catalogRows = () => {
+    if (viewPort === "desktop") return 3;
+    if (viewPort === "tablet") return 4;
+    if (viewPort === "mobile") return 4;
+  };
+
+  const sliderStyles = {
+    dots: true,
+    infinite: true,
+    initialSlide: 0,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    speed: 3000,
+    slidesToShow: slidesToShow(),
+    rows: sliderRows(),
+    slidesToScroll: 1,
+    pauseOnHover: true,
+    swipeToSlide: true,
+    cssEase: "linear",
+  };
+
+  const catalogStyles = {
+    dots: true,
+    infinite: true,
+    speed: 1000,
+    slidesToShow: slidesToShow(),
+    rows: catalogRows(),
+    slidesToScroll: slidesToShow(),
+    appendDots: (dots) => (
+      <div>
+        <ul style={{ margin: "0px" }}> {dots} </ul>
+      </div>
+    ),
+    customPaging: (i) => (
+      <div
+        style={{
+          width: "30px",
+          color: "blue",
+          border: "1px blue solid",
+        }}
+      >
+        {i + 1}
+      </div>
+    ),
+  };
 
   useEffect(() => {
     getProducts().then((response) => setProducts([...response]));
-    return () => {
-      clearInterval(interval);
-    };
   }, []);
-
-  useEffect(() => {
-    setSlideSize(getSlideSize(viewPort));
-    // return () => {
-    //   clearInterval(interval);
-    // };
-  }, [viewPort]);
 
   useEffect(() => {
     if (filter === "all") {
       getProducts().then((response) => setProducts([...response]));
+      console.log(filter)
     } else {
       getProducts().then((response) =>
         setProducts([
@@ -59,68 +90,27 @@ const ProductsList = ({ filter, changePage, setProduct, viewPort }) => {
     changePage("product");
     document.querySelector("body").style.overflow = "hidden";
   };
-
-  const chunkedProducts = useMemo(
-    () => chunk(products, slideSize),
-    [products, slideSize]
-  );
-
-  useEffect(() => {
-    if (!chunkedProducts.length) return;
-    if (filter !== "all" && interval) {
-      clearInterval(interval);
-      setCurrentSlide(0);
-      return;
-    }
-    if (interval) return;
-    if (filter === "all") {
-      interval = setInterval(() => {
-        setCurrentSlide((prev) => {
-          if (chunkedProducts.length - 1 <= prev) {
-            return 0;
-          }
-          return prev + 1;
-        });
-      }, 5000);
-    }
-  }, [chunkedProducts, filter, viewPort]);
-
-  const changeIndex = (index) => {
-    setCurrentSlide(index);
-  };
-
   return (
-    <div className="carousel">
-      <div
-        style={{
-          transform: `translateX(-${currentSlide * 100}%)`,
-        }}
-        className="carousel-inner"
-      >
-        {chunkedProducts.map((products) => (
-          <div className="carousel-item">
-            {products.map((product) => (
+    <>
+      {filter === "all" && (
+        <Slider {...sliderStyles}>
+          {products.map((product) => (
+            <li>
               <Product openProduct={openProduct} product={product} />
-            ))}
-          </div>
-        ))}
-      </div>
-      <div className="bullets-container">
-        {chunkedProducts.map((product, index) => (
-          <div
-            key={index}
-            className={
-              filter === "all"
-                ? `${index === currentSlide ? "activeBullet" : "bullets"}`
-                : "pagination"
-            }
-            onClick={() => changeIndex(index)}
-          >
-            {filter !== "all" && index + 1}
-          </div>
-        ))}
-      </div>
-    </div>
+            </li>
+          ))}
+        </Slider>
+      )}
+      {filter !== "all" && (
+        <Slider {...catalogStyles}>
+          {products.map((product) => (
+            <li>
+              <Product openProduct={openProduct} product={product} />
+            </li>
+          ))}
+        </Slider>
+      )}
+    </>
   );
 };
 

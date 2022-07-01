@@ -6,9 +6,16 @@ const CatalogHead = ({ setFilter }) => {
     setFilter(id);
   };
 
+  const onChangeFilterToAll = () => {
+    setFilter("all");
+  };
+
   return (
     <div className="catalogHead_container">
-      <div className="catalogHead_titleContainer">
+      <div
+        onClick={onChangeFilterToAll}
+        className="catalogHead_titleContainer"
+      >
         <span className="catalogHead_titleBack">КАТАЛОГ</span>
         <h2 className="catalogHead_title">КАТАЛОГ</h2>
       </div>
@@ -19,6 +26,13 @@ const CatalogHead = ({ setFilter }) => {
             <p className="catalogHead_menu_brand">Yeezy</p>
             <div className="catalogHead_dropdown_list">
               <ul className="catalogHead_dropdown_list_background">
+                <li
+                  className="catalogHead_sub_menu_link"
+                  id="Yeezy"
+                  onClick={onChangeFilter}
+                >
+                  Все Yeezy
+                </li>
                 <li
                   className="catalogHead_sub_menu_link"
                   id="750"

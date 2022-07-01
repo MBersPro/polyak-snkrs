@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useMemo } from "react";
+import React, { useState, useEffect } from "react";
 import "./ProductList.css";
 import { getProducts } from "../../../utils/firebase";
 import Slider from "react-slick";
@@ -11,7 +11,7 @@ const ProductsList = ({ filter, changePage, setProduct, viewPort }) => {
   const [sliderSettings, setSliderSettings] = useState({});
 
   const slidesToShow = () => {
-    if (viewPort === "desktop") return 6;
+    if (viewPort === "desktop") return 1;
     if (viewPort === "tablet") return 4;
     if (viewPort === "mobile") return 2;
   };
@@ -28,21 +28,21 @@ const ProductsList = ({ filter, changePage, setProduct, viewPort }) => {
   };
 
   const sliderStyles = {
-    initialSlide: 1,
     dots: true,
     infinite: true,
     autoplay: true,
-    autoplaySpeed: 5000,
-    speed: 1000,
+    autoplaySpeed: 4000,
+    speed: 4000,
     slidesToShow: slidesToShow(),
     slidesToScroll: 1,
     rows: sliderRows(),
     pauseOnHover: true,
     swipeToSlide: true,
+    cssEase: "linear",
+    initialSlide: 0,
   };
 
   const catalogStyles = {
-    initialSlide: 12,
     dots: true,
     infinite: true,
     speed: 1000,
@@ -68,12 +68,9 @@ const ProductsList = ({ filter, changePage, setProduct, viewPort }) => {
   };
 
   useEffect(() => {
-    getProducts().then((response) => setProducts([...response]));
     setSliderSettings({ ...sliderStyles });
-    slider.slickGoTo(0, dontAnimate);
+    getProducts().then((response) => setProducts([...response]));
   }, []);
-
-  useEffect(() => {}, [viewPort]);
 
   useEffect(() => {
     if (filter === "all") {

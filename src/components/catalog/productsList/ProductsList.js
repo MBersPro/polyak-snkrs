@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect} from "react";
 import "./ProductList.css";
 import { getProducts } from "../../../utils/firebase";
 import Slider from "react-slick";
@@ -6,8 +6,6 @@ import Product from "./productsSlide/Product";
 
 const ProductsList = ({ filter, changePage, setProduct, viewPort }) => {
   const [products, setProducts] = useState([]);
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const [slideSize, setSlideSize] = useState(0);
 
   const slidesToShow = () => {
     if (viewPort === "desktop") return 6;
@@ -74,6 +72,7 @@ const ProductsList = ({ filter, changePage, setProduct, viewPort }) => {
   useEffect(() => {
     if (filter === "all") {
       getProducts().then((response) => setProducts([...response]));
+      console.log(filter)
     } else {
       getProducts().then((response) =>
         setProducts([
@@ -90,8 +89,6 @@ const ProductsList = ({ filter, changePage, setProduct, viewPort }) => {
     changePage("product");
     document.querySelector("body").style.overflow = "hidden";
   };
-
-  const onButtonClick = () => {};
   return (
     <>
       {filter === "all" && (
@@ -112,8 +109,6 @@ const ProductsList = ({ filter, changePage, setProduct, viewPort }) => {
           ))}
         </Slider>
       )}
-
-      <button className="gmt" type="button" onClick={onButtonClick}></button>
     </>
   );
 };

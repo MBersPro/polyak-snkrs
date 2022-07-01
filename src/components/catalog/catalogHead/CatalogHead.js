@@ -6,9 +6,16 @@ const CatalogHead = ({ setFilter }) => {
     setFilter(id);
   };
 
+  const onChangeFilterToAll = () => {
+    setFilter("all");
+  };
+
   return (
     <div className="catalogHead_container">
-      <div id="all" onClick={onChangeFilter} className="catalogHead_titleContainer">
+      <div
+        onClick={onChangeFilterToAll}
+        className="catalogHead_titleContainer"
+      >
         <span className="catalogHead_titleBack">КАТАЛОГ</span>
         <h2 className="catalogHead_title">КАТАЛОГ</h2>
       </div>

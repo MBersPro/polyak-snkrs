@@ -1,26 +1,87 @@
+.fool {
+  position: absolute;
+  width: 100vw;
+  height: 658px;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.fool2 {
+  width: 100%;
+  height: 658px;
+  object-fit: cover;
+}
+
 @media screen and (max-width: 767px) {
-    .screen{
-        background-repeat: no-repeat;
-        background-size: cover;
-        height: 215px;
-        transition: background-image 0.5s ease-out;
-    }
+  .screen {
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 215px;
+    transition: background-image 0.5s ease-out;
+    position: relative;
+    background-color: grey;
+  }
+  .fool {
+    position: absolute;
+    width: 100vw;
+    height: 215px;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.fool2 {
+    width: 100%;
+    height: 215px;
+    object-fit: cover;
+}
 }
 @media (max-width: 1200px) and (min-width: 768px) {
-    .screen{
-        background-repeat: no-repeat;
-        background-size: cover;
-        height: 400px;
-        transition: background-image 0.5s ease-in-out;
-    }
+  .screen {
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 400px;
+    transition: background-image 0.5s ease-in-out;
+    position: relative;
+    background-color: grey;
+  }
+  .fool {
+    position: absolute;
+    width: 100vw;
+    height: 400px;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+
+  .fool2 {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+  }
 }
 
 @media screen and (min-width: 1201px) {
-    .screen{
-        background-repeat: no-repeat;
-        background-size: cover;
-        height: 658px;
-        transition: background-image 0.5s ease-in-out;
-    }
-}
+  .screen {
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 658px;
+    transition: background-image 0.5s ease-in-out;
+    background-color: grey;
+  }
+  .fool {
+    position: absolute;
+    width: 100vw;
+    height: 658px;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
 
+  .fool2 {
+    width: 100%;
+    height: 658px;
+    object-fit: cover;
+  }
+}

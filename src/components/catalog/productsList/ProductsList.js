@@ -17,7 +17,7 @@ const ProductsList = ({ filter, changePage, setProduct, viewPort }) => {
   const sliderRows = () => {
     if (viewPort === "desktop") return 1;
     if (viewPort === "tablet") return 2;
-    if (viewPort === "mobile") return 3;
+    if (viewPort === "mobile") return 2;
   };
 
   const catalogRows = () => {
@@ -31,8 +31,8 @@ const ProductsList = ({ filter, changePage, setProduct, viewPort }) => {
     infinite: true,
     initialSlide: 0,
     autoplay: true,
-    autoplaySpeed: 3000,
-    speed: 3000,
+    autoplaySpeed: 4000,
+    speed: 2000,
     slidesToShow: slidesToShow(),
     rows: sliderRows(),
     slidesToScroll: 1,

@@ -11,7 +11,7 @@ const ProductsList = ({ filter, changePage, setProduct, viewPort }) => {
   const [sliderSettings, setSliderSettings] = useState({});
 
   const slidesToShow = () => {
-    if (viewPort === "desktop") return 1;
+    if (viewPort === "desktop") return 6;
     if (viewPort === "tablet") return 4;
     if (viewPort === "mobile") return 2;
   };
@@ -31,10 +31,10 @@ const ProductsList = ({ filter, changePage, setProduct, viewPort }) => {
     dots: true,
     infinite: true,
     autoplay: true,
-    autoplaySpeed: 4000,
-    speed: 4000,
+    autoplaySpeed: 10000,
+    speed: 10000,
     slidesToShow: slidesToShow(),
-    slidesToScroll: 1,
+    slidesToScroll: 6,
     rows: sliderRows(),
     pauseOnHover: true,
     swipeToSlide: true,
@@ -43,6 +43,7 @@ const ProductsList = ({ filter, changePage, setProduct, viewPort }) => {
   };
 
   const catalogStyles = {
+    initialSlide: 1,
     dots: true,
     infinite: true,
     speed: 1000,

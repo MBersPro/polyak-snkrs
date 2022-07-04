@@ -1,65 +1,90 @@
 @media screen and (max-width: 767px) {
-  .container_AboutMe{
-      padding-top: 25px;
-      padding-bottom: 25px;
+  .container_AboutMe {
+    padding-top: 25px;
+    padding-bottom: 25px;
   }
-  .h2_AboutMe{
-      margin-bottom: 20px;
+  .h2_AboutMe {
+    margin-bottom: 20px;
   }
-  .txt_AboutMe{
+  .txt_AboutMe {
     font-size: var(--h2-size);
     font-weight: var(--r-fw);
     font-family: var(--font);
   }
-  .aboutMe_titleBack{
+  .aboutMe_titleBack {
     display: none;
   }
 }
 @media (max-width: 1200px) and (min-width: 768px) {
-  .container_AboutMe{
+  .container_AboutMe {
     padding-top: 50px;
     padding-bottom: 70px;
   }
-  .h2_AboutMe{
+  .h2_AboutMe {
     margin-bottom: 30px;
   }
-  .txt_AboutMe{
+  .txt_AboutMe {
     font-size: 32px;
     font-weight: var(--l-fw);
     font-family: var(--font);
   }
-  .aboutMe_titleBack{
+  .aboutMe_titleBack {
     display: none;
   }
 }
 @media screen and (min-width: 1201px) {
-  .container_AboutMe{
-    padding-top: 200px;
-    padding-bottom: 300px;
-  }
-  .aboutMe_screen{
+  .aboutMe_screen {
     background: rgba(196, 196, 196, 0.5);
     box-sizing: border-box;
+    height: 658px;
   }
-  .aboutMe_title{
-    position: absolute;
-    bottom: -5px;
-    right: 0px;
+  .container_AboutMe {
+    display: flex;
+    align-items: center;
+    height: 100%;
   }
-  .txt_AboutMe{
-    display: none;
+  .aboutMe_titleContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 585px;
   }
-  .aboutMe_titleContainer{
-    display: inline-block;
-    position: relative;
-    
-  }
-  .aboutMe_titleBack{
+  .aboutMe_titleBack {
     font-style: normal;
     font-weight: var(--r-fw);
     font-family: var(--font);
     font-size: 96px;
-    line-height: 89px;
-    color: rgba(252, 103, 1, 0.04); 
+    color: rgba(252, 103, 1, 0.04);
+    position: relative;
+  }
+  .aboutMe_title {
+    position: absolute;
+    right: 0px;
+    bottom: 18px;
+    font-size: 32px;
+    color: rgba(252, 103, 1);
+  }
+  .aboutMe_square {
+    box-sizing: border-box;
+    background: rgba(255, 255, 255, 0.67);
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 40px;
+    padding-right: 40px;
+    width: 585px;
+  }
+  .txt_AboutMe {
+    width: 585px;
+    font-size: 40px;
+    padding-left: 30px;
+    padding-right: 30px;
+    box-sizing: border-box;
+    color: rgb(130, 130, 130);
+    font-style: normal;
+    font-weight: var(--r-fw);
+    font-family: var(--font);
   }
 }

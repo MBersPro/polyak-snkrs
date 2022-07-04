@@ -1,33 +1,41 @@
-import React from 'react';
-import './AboutMe.css'
-const AboutMe = () => {
+import React from "react";
+import "./AboutMe.css";
+import MovingText from "react-moving-text";
 
-    return (
+const AboutMe = () => {
+  return (
     <div className="aboutMe_screen">
-        
-        <div className='container_AboutMe container' id="aboutMe">
-        
-        <div className='aboutMe_titleContainer'>
-            <span className='aboutMe_titleBack'>ОБО МНЕ</span>
-            <h2 className='aboutMe_title'>ОБО МНЕ</h2>
-        </div> 
-        
-            <p className='txt_AboutMe'>
-                Lorem Ipsum является текст-заполнитель обычно 
-                используется в графических, печать и издательской индустрии 
-                для предварительного просмотра макета и визуальных макетах.
-                Lorem Ipsum является текст-заполнитель обычно 
-                используется в графических, печать и издательской индустрии 
-                для предварительного просмотра макета и визуальных макетах.
-                Lorem Ipsum является текст-заполнитель обычно 
-                используется в графических, печать и издательской индустрии 
-                для предварительного просмотра макета и визуальных макетах.
-            </p>
+      <div className="container_AboutMe container" id="aboutMe">
+        <div className="aboutMe_titleContainer">
+          <h2 className="aboutMe_titleBack">
+            ОБО МНЕ<span className="aboutMe_title">ОБО МНЕ</span>
+          </h2>
         </div>
-        <div className='aboutMe_square'>
+        <div className="aboutMe_square">
+          {/* <p className="txt_AboutMe">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam
+            veritatis inventore perferendis harum asperiores consectetur
+            temporibus accusantium unde id, consequatur numquam blanditiis saepe
+            aut. Reprehenderit.
+          </p> */}
+          <MovingText
+            className="txt_AboutMe"
+            type="fadeInFromRight"
+            duration="1000ms"
+            delay="3s"
+            direction="normal"
+            timing="ease"
+            iteration={1}
+          >
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam
+            veritatis inventore perferendis harum asperiores consectetur
+            temporibus accusantium unde id, consequatur numquam blanditiis saepe
+            aut. Reprehenderit.
+          </MovingText>
         </div>
+      </div>
     </div>
-    );
-}
+  );
+};
 
 export default AboutMe;

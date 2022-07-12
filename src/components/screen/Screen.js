@@ -42,7 +42,7 @@ const Screen = ({ children, viewPort }) => {
     dots: false,
     infinite: true,
     autoplay: true,
-    autoplaySpeed: 7000,
+    autoplaySpeed: 15000,
     speed: 3000,
     slidesToShow: 1,
     slidesToScroll: 1,

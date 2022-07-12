@@ -1,4 +1,4 @@
-import React, { useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import "./ProductList.css";
 import { getProducts } from "../../../utils/firebase";
 import Slider from "react-slick";
@@ -6,7 +6,6 @@ import Product from "./productsSlide/Product";
 
 const ProductsList = ({ filter, changePage, setProduct, viewPort }) => {
   const [products, setProducts] = useState([]);
-
 
   const slidesToShow = () => {
     if (viewPort === "desktop") return 6;
@@ -26,19 +25,53 @@ const ProductsList = ({ filter, changePage, setProduct, viewPort }) => {
     if (viewPort === "mobile") return 4;
   };
 
+  const appendDots = () => {
+    if (viewPort === "desktop")
+      return (dots) => (
+        <div
+          style={{
+            bottom: "-50px",
+          }}
+        >
+          <ul style={{ margin: "0px" }}> {dots} </ul>
+        </div>
+      );
+    if (viewPort === "tablet")
+      return (dots) => (
+        <div
+          style={{
+            bottom: "-45px",
+          }}
+        >
+          <ul style={{ margin: "0px" }}> {dots} </ul>
+        </div>
+      );
+    if (viewPort === "mobile")
+      return (dots) => (
+        <div
+          style={{
+            bottom: "-60px",
+          }}
+        >
+          <ul style={{ margin: "0px" }}> {dots} </ul>
+        </div>
+      );
+  };
+
   const sliderStyles = {
     dots: true,
     infinite: true,
     initialSlide: 0,
     autoplay: true,
-    autoplaySpeed: 4000,
+    autoplaySpeed: 8000,
     speed: 2000,
     slidesToShow: slidesToShow(),
     rows: sliderRows(),
     slidesToScroll: 1,
-    pauseOnHover: true,
-    swipeToSlide: true,
+    pauseOnHover: false,
+    swipe: false,
     cssEase: "linear",
+    appendDots: appendDots(),
   };
 
   const catalogStyles = {
@@ -73,7 +106,7 @@ const ProductsList = ({ filter, changePage, setProduct, viewPort }) => {
   useEffect(() => {
     if (filter === "all") {
       getProducts().then((response) => setProducts([...response]));
-      console.log(filter)
+      console.log(filter);
     } else {
       getProducts().then((response) =>
         setProducts([

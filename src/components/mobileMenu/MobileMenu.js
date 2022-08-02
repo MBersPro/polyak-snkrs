@@ -3,12 +3,12 @@ import Contacts from "../contacts/Contacts";
 import Korzina from "../korzina/Korzina";
 import "./MobileMenu.css";
 
-const MobileMenu = ({ mobileMenu, closeMobileMenu, changePage, page, korzina, orangeColor, blackColor, whiteColor}) => {
+const MobileMenu = ({ mobileMenu, closeMobileMenu, changePage, page, korzina}) => {
   const changeOnContacts = () => {
     changePage("contacts");
   };
-  const changeOnKorzina = () => {
-    changePage("korzina");
+  const changeOnMobileKorzina = () => {
+    changePage("mobileKorzina");
   };
 
   return (
@@ -30,7 +30,7 @@ const MobileMenu = ({ mobileMenu, closeMobileMenu, changePage, page, korzina, or
               <li className="mobileMenu_li">
                 <a
                   className="mobileMenu_element_menu"
-                  onClick={changeOnKorzina}
+                  onClick={changeOnMobileKorzina}
                 >
                   КОРЗИНА
                 </a>
@@ -73,14 +73,14 @@ const MobileMenu = ({ mobileMenu, closeMobileMenu, changePage, page, korzina, or
               </li>
             </ul>
             <div className="div_theme_btn_mobileMenu">
-              <button className="white_theme_btn_mobileMenu" onClick={whiteColor}></button>
-              <button className="orange_theme_btn_mobileMenu" onClick={orangeColor}></button>
-              <button className="black_theme_btn_mobileMenu" onClick={blackColor}></button>
+              <button className="white_theme_btn_mobileMenu"></button>
+              <button className="orange_theme_btn_mobileMenu"></button>
+              <button className="black_theme_btn_mobileMenu"></button>
             </div>
           </>
         )}
         {page.contacts && <Contacts contacts={korzina}/>}
-        {page.korzina && <Korzina korzina={korzina}/>}
+        {page.mobileKorzina && <Korzina korzina={korzina}/>}
       </div>
     </div>
   </div>

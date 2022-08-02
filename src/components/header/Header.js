@@ -3,9 +3,9 @@ import "./Header.css";
 import { ReactComponent as Logo } from "./svg/logo.svg";
 import { ReactComponent as Korzina } from "./svg/korzina.svg";
 import Hamburger from "hamburger-react";
-const Header = ({ mobileMenu, children, changeMobileMenu, setTest, changePage}) => {
-const changePageToKorzina = () => {
-  changePage("korzina");
+const Header = ({ mobileMenu, children, changeMobileMenu, changePage, setDesktopKorzina}) => {
+const changeOnDesktopKorzina = () => {
+  changePage("desktopKorzina");
 }
   return (
   
@@ -32,7 +32,7 @@ const changePageToKorzina = () => {
                 
           </ul>
           <div className="header_container_korzinaLink">
-             <a className="header_korzinaLink" onClick={changePageToKorzina}><Korzina/></a>
+             <a className="header_korzinaLink" onClick={changeOnDesktopKorzina}><Korzina/></a>
           </div>
           
         </div>

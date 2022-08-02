@@ -128,7 +128,7 @@ const ProductsList = ({ filter, changePage, setProduct, viewPort }) => {
       {filter === "all" && (
         <Slider {...sliderStyles}>
           {products.map((product) => (
-            <li>
+            <li key={product.id}>
               <Product openProduct={openProduct} product={product} />
             </li>
           ))}

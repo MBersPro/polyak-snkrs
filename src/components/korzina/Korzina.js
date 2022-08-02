@@ -17,7 +17,7 @@ const Korzina = ({ korzina }) => {
     </div>
   );
   return (
-    <div className="korzina_container">
+    <div className="korzina_container container">
       <ul className="korzina_container_products">
         {korzina.map((product) => (
           <li key={product.id} className="korzina_container_product">

@@ -9,7 +9,6 @@ import ProductFullInfo from "./productFullInfo/ProductFullInfo";
 import Questions from "./questions/Questions";
 import Reviews from "./reviews/Reviews";
 import Screen from "./screen/Screen";
-import ModalKorzina from "./modalKorzina/modalKorzina";
 import Korzina from "./korzina/Korzina";
 const getViewPort = () => {
   const viewPortSize = document.documentElement.clientWidth;
@@ -21,17 +20,13 @@ const getViewPort = () => {
 const App = () => {
   const [page, setPage] = useState({ main: true });
   const [mobileMenu, setMobileMenu] = useState(false);
-  const [Test, setTest] = useState(true);
+
   const [product, setProduct] = useState({});
   const [korzina, setKorzina] = useState([]);
   const [contacts, setContacts] = useState([]);
   const [viewPort, setViewPort] = useState(getViewPort());
-
   const body = document.querySelector("body");
-  const h2 = document.querySelector("h2");
-  const MobMenuCont = document.getElementById("MobMenuCont");
   const overflowBody = mobileMenu ? "scroll" : "hidden";
-  const mobileMenuOpen = document.getElementsByClassName("mobileMenuOpen");
 
   useEffect(() => {
     const resizeHandler = () => {
@@ -46,7 +41,7 @@ const App = () => {
     setPage({ main: true });
     body.style.overflow = `${overflowBody}`;
   };
-  
+
   const closeMobileMenu = () => {
     setMobileMenu(false);
     body.style.overflow = `${overflowBody}`;
@@ -54,65 +49,50 @@ const App = () => {
   const changePage = (page) => {
     setPage({ [page]: true });
   };
-  
+
   const addToKorzina = () => {
     setKorzina((prev) => [...prev, product]);
   };
-  const orangeColor = () => {
-    body.style.backgroundColor = "#fc6701";
-    h2.style.color = "black";
-    MobMenuCont.style.backgroundColor = "#fc6701";
-  };
-  const blackColor = () => {
-    body.style.backgroundColor = "#4A4A4A";
-    MobMenuCont.style.backgroundColor = "#4A4A4A";
-    h2.style.color = "#fc6701";
-    mobileMenuOpen.style.backgroundColor = "#4A4A4A";
-  };
-  const whiteColor = () => {
-    body.style.backgroundColor = "white";
-    h2.style.color = "#fc6701";
-    MobMenuCont.style.backgroundColor = "white";
-  };
   return (
-  
     <>
-
+    {(page.main || page.mobileKorzina) && (
       <>
-      <Screen viewPort={viewPort}>
       
-        <Header
-          mobileMenu={mobileMenu}
-          changeMobileMenu={changeMobileMenu}
-          korzina={korzina}
-          changePage={changePage}
-          setTest={setTest} 
-        >
-          <MobileMenu
-            page={page}
+        <Screen viewPort={viewPort}>
+          <Header
             mobileMenu={mobileMenu}
-            changePage={changePage}
-            closeMobileMenu={closeMobileMenu}
+            changeMobileMenu={changeMobileMenu}
             korzina={korzina}
-            contacts={contacts}
-            orangeColor={orangeColor}
-            blackColor={blackColor}
-            whiteColor={whiteColor}
-          />
+            changePage={changePage}
+          >
+            <MobileMenu
+              page={page}
+              mobileMenu={mobileMenu}
+              changePage={changePage}
+              closeMobileMenu={closeMobileMenu}
+              korzina={korzina}
+              contacts={contacts}
+            />
+          </Header>
+          
+        </Screen>
 
-        </Header>
+        <Catalog
+          viewPort={viewPort}
+          setProduct={setProduct}
+          changePage={changePage}
+        />
+        <AboutMe />
         
-      </Screen>
-      
-      <Catalog viewPort={viewPort} setProduct={setProduct} changePage={changePage} />
-      <AboutMe />
-      <Questions />
-      <Reviews />
-      
+        <Questions />
+        <Reviews />
+        <Footer />
+     
       </>
-
-
-      {page.korzina && <Korzina korzina={korzina}/>}
+    )}
+      {page.desktopKorzina && (
+        <Korzina korzina={korzina}/>
+      )}
       {page.product && (
         <ProductFullInfo
           changePage={changePage}
@@ -120,9 +100,7 @@ const App = () => {
           product={product}
         />
       )}
-      
     </>
-   
   );
 };
 

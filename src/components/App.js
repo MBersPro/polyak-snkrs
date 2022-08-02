@@ -9,7 +9,8 @@ import ProductFullInfo from "./productFullInfo/ProductFullInfo";
 import Questions from "./questions/Questions";
 import Reviews from "./reviews/Reviews";
 import Screen from "./screen/Screen";
-
+import ModalKorzina from "./modalKorzina/modalKorzina";
+import Korzina from "./korzina/Korzina";
 const getViewPort = () => {
   const viewPortSize = document.documentElement.clientWidth;
   if (viewPortSize <= 767) return "mobile";
@@ -20,8 +21,10 @@ const getViewPort = () => {
 const App = () => {
   const [page, setPage] = useState({ main: true });
   const [mobileMenu, setMobileMenu] = useState(false);
+  const [Test, setTest] = useState(true);
   const [product, setProduct] = useState({});
   const [korzina, setKorzina] = useState([]);
+  const [contacts, setContacts] = useState([]);
   const [viewPort, setViewPort] = useState(getViewPort());
 
   const body = document.querySelector("body");
@@ -43,16 +46,15 @@ const App = () => {
     setPage({ main: true });
     body.style.overflow = `${overflowBody}`;
   };
-
+  
   const closeMobileMenu = () => {
     setMobileMenu(false);
     body.style.overflow = `${overflowBody}`;
   };
-
   const changePage = (page) => {
     setPage({ [page]: true });
   };
-
+  
   const addToKorzina = () => {
     setKorzina((prev) => [...prev, product]);
   };
@@ -73,13 +75,18 @@ const App = () => {
     MobMenuCont.style.backgroundColor = "white";
   };
   return (
+  
     <>
+
+      <>
       <Screen viewPort={viewPort}>
+      
         <Header
           mobileMenu={mobileMenu}
           changeMobileMenu={changeMobileMenu}
           korzina={korzina}
           changePage={changePage}
+          setTest={setTest} 
         >
           <MobileMenu
             page={page}
@@ -87,17 +94,25 @@ const App = () => {
             changePage={changePage}
             closeMobileMenu={closeMobileMenu}
             korzina={korzina}
+            contacts={contacts}
             orangeColor={orangeColor}
             blackColor={blackColor}
             whiteColor={whiteColor}
           />
+
         </Header>
+        
       </Screen>
+      
       <Catalog viewPort={viewPort} setProduct={setProduct} changePage={changePage} />
       <AboutMe />
       <Questions />
       <Reviews />
-      <Footer />
+      
+      </>
+
+
+      {page.korzina && <Korzina korzina={korzina}/>}
       {page.product && (
         <ProductFullInfo
           changePage={changePage}
@@ -105,7 +120,9 @@ const App = () => {
           product={product}
         />
       )}
+      
     </>
+   
   );
 };
 

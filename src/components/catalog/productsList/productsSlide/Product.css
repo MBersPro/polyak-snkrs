@@ -1,11 +1,12 @@
+@media screen and (max-width: 767px) {
 .product {
   margin-bottom: 10px;
 
 }
 
 .productList_image_container {
-  width: 160px;
-  height: 160px;
+  width: 130px;
+  height: 130px;
 }
 .productList_image {
   width: 100%;
@@ -32,4 +33,79 @@
   font-size: 10px;
   color: #000000;
   text-align: center;
+}
+}
+@media (max-width: 1200px) and (min-width: 768px) {
+  .product {
+    margin-bottom: 10px;
+  
+  }
+  
+  .productList_image_container {
+    width: 160px;
+    height: 160px;
+  }
+  .productList_image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    -webkit-box-shadow: 4px 5px 10px 2px rgba(34, 60, 80, 0.2);
+    -moz-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+    box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+  }
+  .productList_name_product {
+    font-family: var(--font);
+    font-style: normal;
+    font-weight: var(--l-fw);
+    font-size: 10px;
+    color: #000000;
+    margin-bottom: 10px;
+    max-width: 160px;
+    text-align: center;
+  }
+  .productList_price_product {
+    font-family: var(--font);
+    font-style: normal;
+    font-weight: var(--l-fw);
+    font-size: 10px;
+    color: #000000;
+    text-align: center;
+  }
+}
+@media screen and (min-width: 1201px) {
+  .product {
+    margin-bottom: 10px;
+  
+  }
+  
+  .productList_image_container {
+    width: 160px;
+    height: 160px;
+  }
+  .productList_image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    -webkit-box-shadow: 4px 5px 10px 2px rgba(34, 60, 80, 0.2);
+    -moz-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+    box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+  }
+  .productList_name_product {
+    font-family: var(--font);
+    font-style: normal;
+    font-weight: var(--l-fw);
+    font-size: 10px;
+    color: #000000;
+    margin-bottom: 10px;
+    max-width: 160px;
+    text-align: center;
+  }
+  .productList_price_product {
+    font-family: var(--font);
+    font-style: normal;
+    font-weight: var(--l-fw);
+    font-size: 10px;
+    color: #000000;
+    text-align: center;
+  }
 }

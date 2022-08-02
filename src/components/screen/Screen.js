@@ -52,7 +52,7 @@ const Screen = ({ children, viewPort }) => {
     <div className={styles.screen}>
       {children}
       <div className={styles.fool}>
-        <Slider {...settings}>
+        <Slider {...settings} arrows={false}к >
           {/* <img className={styles.fool2} src={image1d} alt="some" />
           <img className={styles.fool2} src={image2d} alt="some" />
           <img className={styles.fool2} src={image4d} alt="some" /> */}

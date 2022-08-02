@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/polyak-snkrs/static/css/main.3a0cbdc9.css",
-    "main.js": "/polyak-snkrs/static/js/main.79783006.js",
+    "main.css": "/polyak-snkrs/static/css/main.9c25366a.css",
+    "main.js": "/polyak-snkrs/static/js/main.41f0db40.js",
     "static/media/snkrs_image_4t.jpg": "/polyak-snkrs/static/media/snkrs_image_4t.dfbf1c13188abb15aec9.jpg",
     "static/media/snkrs_image_2t.jpg": "/polyak-snkrs/static/media/snkrs_image_2t.6f374a8998dfbc64afc1.jpg",
     "static/media/snkrs_image_3t.jpg": "/polyak-snkrs/static/media/snkrs_image_3t.a802dd95df95e1ae5bf6.jpg",
@@ -18,16 +18,16 @@
     "static/media/instagram.svg": "/polyak-snkrs/static/media/instagram.3e1d2662f3b0746c1e2d12ce43fc8286.svg",
     "static/media/delBtn.svg": "/polyak-snkrs/static/media/delBtn.c565060364a2496cd65698ea48a0f284.svg",
     "static/media/phone.svg": "/polyak-snkrs/static/media/phone.ea547dddf601051fb9c5fa082dd26b77.svg",
-    "static/media/korzina.svg": "/polyak-snkrs/static/media/korzina.4750bd62b3ce26a6658eaa1bc61b0f0d.svg",
     "index.html": "/polyak-snkrs/index.html",
     "static/media/mail.svg": "/polyak-snkrs/static/media/mail.303db1ca29cbbeade29bf12cd2eb81c8.svg",
+    "static/media/korzina.svg": "/polyak-snkrs/static/media/korzina.08d60ae64642085fe4b57ad8f2bee44c.svg",
     "static/media/Name.svg": "/polyak-snkrs/static/media/Name.415bba2f76f410bf7d33539a7d161a6f.svg",
     "static/media/Phone.svg": "/polyak-snkrs/static/media/Phone.472757b3e71f36df9ca3c0e8a6bcae0b.svg",
-    "main.3a0cbdc9.css.map": "/polyak-snkrs/static/css/main.3a0cbdc9.css.map",
-    "main.79783006.js.map": "/polyak-snkrs/static/js/main.79783006.js.map"
+    "main.9c25366a.css.map": "/polyak-snkrs/static/css/main.9c25366a.css.map",
+    "main.41f0db40.js.map": "/polyak-snkrs/static/js/main.41f0db40.js.map"
   },
   "entrypoints": [
-    "static/css/main.3a0cbdc9.css",
-    "static/js/main.79783006.js"
+    "static/css/main.9c25366a.css",
+    "static/js/main.41f0db40.js"
   ]
 }

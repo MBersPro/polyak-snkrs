@@ -91,7 +91,7 @@ const App = () => {
       </>
     )}
       {page.desktopKorzina && (
-        <Korzina korzina={korzina}/>
+        <Korzina korzina={korzina} changePage={changePage}/>
       )}
       {page.product && (
         <ProductFullInfo
